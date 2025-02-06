@@ -586,30 +586,30 @@ outlines:
           shift: [ks * 0.478, kp * 0.468 - 0.005]
 
         - ref: plate_additional_outline_top
-        - ref: plate_additional_outline_bottom_left
         - ref: plate_additional_outline_bottom_right
+          shift: [0.3 kp, -0.2 kp]
 
         # --- Thumb Cluster Contour --- (New points to follow thumb keys)
         # cols: inward, middle, outward, extra_outward, big_outward
         # rows: home
         - ref: thumb_cluster_big_outward_home # Start of thumb cluster contour
-          shift: [0.6 kp, 0.4 kp] # Adjusted: Closer to key, more down
-        # - ref: thumb_cluster_extra_outward_home # Start of thumb cluster contour
-        #   shift: [-0.6 kp, -0.4 kp] # Adjusted: Closer to key, more down
-        # - ref: thumb_cluster_outward_home
-        #   shift: [-0.5 kp, -0.3 kp] # Adjusted: Closer to key, less down
-        # - ref: thumb_cluster_middle_home
-        #   shift: [-0.4 kp, -0.2 kp] # Adjusted: Closer to key, less down
-        # - ref: thumb_cluster_inward_home # End of thumb cluster contour
-        #   shift: [-0.3 kp, 0] # Adjusted: Closer to key, aligned horizontally
+          shift: [0.6 kp, -0.6 kp] # Adjusted: Closer to key, more down
+        - ref: thumb_cluster_extra_outward_home # Start of thumb cluster contour
+          shift: [-0.6 kp, -0.5 kp] # Adjusted: Closer to key, more down
+        - ref: thumb_cluster_outward_home
+          shift: [-0.5 kp, -0.6 kp] # Adjusted: Closer to key, less down
+        - ref: thumb_cluster_middle_home
+          shift: [-0.4 kp, -0.8 kp] # Adjusted: Closer to key, less down
+        - ref: thumb_cluster_inward_home # End of thumb cluster contour
+          shift: [-0.5 kp, -0.6 kp] # Adjusted: Closer to key, aligned horizontally
 
         # --- Bottom Row Contour --- (New points to follow bottom row keys)
         # cols: outer, pinky, ring, middle, index, inner
         # rows: number, top, home, bottom
         - ref: matrix_outer_bottom # Start of bottom row contour
-          shift: [ks * 0.478 + 0.1 kp, -kp * 0.485 - 0.1 kp] # Adjusted: slightly outwards and down
-        - ref: matrix_outer_bottom
-          shift: [ks * 0.478 + 0.1 kp, -kp * 0.485 - 0.1 kp] # Adjusted: slightly outwards and down
+          shift: [-0.5 kp, -0.7 kp]
+        # - ref: matrix_outer_bottom
+        #   shift: [ks * 0.478 + 0.1 kp, -kp * 0.485 - 0.1 kp] # Adjusted: slightly outwards and down
         # - ref: matrix_middle_bottom
         #   shift: [0, -kp * 0.6 kp] # Adjusted: Directly below middle_bottom, further down
         # - ref: matrix_ring_bottom
