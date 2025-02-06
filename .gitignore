@@ -51,9 +51,12 @@ pcbs/_*.*
 points
 source
 
+# kicad
+~*
+
 # npm
 node_modules
 
 # gerbers
 gerbers/*/*
-!gerbers/*/*.zip
+!gerbers/*/*.zip~*
