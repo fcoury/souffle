@@ -229,14 +229,14 @@ points:
               led_prev: LED_1
               led_next: LED_2
       rows:
-        number: # Define the new 'number' row
-          row_net: R-1 # or R4, choose based on your wiring and MCU config
         bottom:
           row_net: R2
         home:
           row_net: R1
         top:
           row_net: R0
+        number: # Define the new 'number' row
+          row_net: R4 # or R4, choose based on your wiring and MCU config
 
     thumb_cluster:
       key:
@@ -248,7 +248,7 @@ points:
           - thumb_key
       anchor:
         ref: matrix_middle_bottom # Anchor to the middle bottom key of the matrix
-        shift: [-1.0 ks, -2.6 kp] # Further adjusted anchor shift to bring MUCH closer and slightly down
+        shift: [-1.0 ks, -1.6 kp] # Further adjusted anchor shift to bring MUCH closer and slightly down
       columns:
         inward: # Closest thumb key to the main matrix
           key:
@@ -558,38 +558,69 @@ outlines:
         - ref: mcu_cover_top_right
         - ref: mcu_cover_bottom_right
         - ref: mcu_cover_bottom_left
-  _matrix_outline: # Likely needs adjustments for Souffle thumb cluster
+  _matrix_outline: # Redefined with more points for better contour
     - what: polygon
       points:
-        - ref: matrix_outer_top
-          shift: [-ks * 0.47 +0.01, kp * 0.475 -0.015]
-        - ref: matrix_ring_top
-          shift: [-ks * 0.47 +0.01, kp * 0.225 -0.014]
-        - ref: matrix_ring_top
-          shift: [-ks * 0.47 +0.01, kp * 0.475 -0.015]
-        - ref: matrix_middle_top
-          shift: [-ks * 0.47 +0.01, kp * 0.35 -0.015]
-        - ref: matrix_middle_top
-          shift: [-ks * 0.47 +0.01, kp * 0.468 -0.005]
-        - ref: matrix_middle_top
-          shift: [ks * 0.478, kp * 0.468 -0.005]
-        - ref: matrix_middle_top
-          shift: [ks * 0.478, kp * 0.35 -0.015]
-        - ref: matrix_index_top
-          shift: [ks * 0.478, kp * 0.475 -0.015]
-        - ref: matrix_index_top
-          shift: [ks * 0.478, kp * 0.34 +0.052]
-        - ref: matrix_inner_top
-          shift: [ks * 0.478, kp * 0.468 -0.005]
+        # Top Row (mostly unchanged)
+        # cols: outer, pinky, ring, middle, index, inner
+        # rows: number, top, home, bottom
+        - ref: matrix_outer_number
+          shift: [-ks * 0.47 + 0.01, kp * 0.475 - 0.015]
+        - ref: matrix_ring_number
+          shift: [-ks * 0.47 + 0.01, kp * 0.225 - 0.014]
+        - ref: matrix_ring_number
+          shift: [-ks * 0.47 + 0.01, kp * 0.475 - 0.015]
+        - ref: matrix_middle_number
+          shift: [-ks * 0.47 + 0.01, kp * 0.35 - 0.015]
+        - ref: matrix_middle_number
+          shift: [-ks * 0.47 + 0.01, kp * 0.468 - 0.005]
+        - ref: matrix_middle_number
+          shift: [ks * 0.478, kp * 0.468 - 0.005]
+        - ref: matrix_middle_number
+          shift: [ks * 0.478, kp * 0.35 - 0.015]
+        - ref: matrix_index_number
+          shift: [ks * 0.478, kp * 0.475 - 0.015]
+        - ref: matrix_index_number
+          shift: [ks * 0.478, kp * 0.34 + 0.052]
+        - ref: matrix_inner_number
+          shift: [ks * 0.478, kp * 0.468 - 0.005]
+
         - ref: plate_additional_outline_top
         - ref: plate_additional_outline_bottom_left
         - ref: plate_additional_outline_bottom_right
-        - ref: plate_outline_bottom_4
-        - ref: plate_outline_bottom_3
-        - ref: plate_outline_bottom_2
-        - ref: plate_outline_bottom_1
+
+        # --- Thumb Cluster Contour --- (New points to follow thumb keys)
+        # cols: inward, middle, outward, extra_outward, big_outward
+        # rows: home
+        - ref: thumb_cluster_big_outward_home # Start of thumb cluster contour
+          shift: [0.6 kp, 0.4 kp] # Adjusted: Closer to key, more down
+        # - ref: thumb_cluster_extra_outward_home # Start of thumb cluster contour
+        #   shift: [-0.6 kp, -0.4 kp] # Adjusted: Closer to key, more down
+        # - ref: thumb_cluster_outward_home
+        #   shift: [-0.5 kp, -0.3 kp] # Adjusted: Closer to key, less down
+        # - ref: thumb_cluster_middle_home
+        #   shift: [-0.4 kp, -0.2 kp] # Adjusted: Closer to key, less down
+        # - ref: thumb_cluster_inward_home # End of thumb cluster contour
+        #   shift: [-0.3 kp, 0] # Adjusted: Closer to key, aligned horizontally
+
+        # --- Bottom Row Contour --- (New points to follow bottom row keys)
+        # cols: outer, pinky, ring, middle, index, inner
+        # rows: number, top, home, bottom
+        - ref: matrix_outer_bottom # Start of bottom row contour
+          shift: [ks * 0.478 + 0.1 kp, -kp * 0.485 - 0.1 kp] # Adjusted: slightly outwards and down
         - ref: matrix_outer_bottom
-          shift: [-ks * 0.47 +0.012, -kp * 0.485 -0.025]
+          shift: [ks * 0.478 + 0.1 kp, -kp * 0.485 - 0.1 kp] # Adjusted: slightly outwards and down
+        # - ref: matrix_middle_bottom
+        #   shift: [0, -kp * 0.6 kp] # Adjusted: Directly below middle_bottom, further down
+        # - ref: matrix_ring_bottom
+        #   shift: [-ks * 0.47 + 0.012 - 0.1 kp, -kp * 0.485 - 0.6 kp] # Adjusted: Slightly inwards and significantly down
+        # - ref: matrix_outer_bottom # End of bottom row contour
+        #   shift: [-ks * 0.47 + 0.012 - 0.3 kp, -kp * 0.485 - 0.5 kp] # Adjusted: Further inwards and significantly down
+
+        # - ref: plate_outline_bottom_1 # Re-add the remaining points, may need further adjust
+        # - ref: plate_outline_bottom_2
+        # - ref: plate_outline_bottom_3
+        # - ref: plate_outline_bottom_4
   _plate_outline: # Likely needs adjustments for Souffle thumb cluster
     - what: outline
       name: _matrix_outline
