@@ -11,9 +11,9 @@
   (paper "A3")
   (title_block
     (title "controller_overlay")
-    (date "2025-02-05")
+    (date "2025-02-06")
     (rev "0.1")
-    (company "ceoloide (adapted from corney-island)")
+    (company "fcoury (adapted from corney-island)")
   )
 
   (layers
@@ -86,7 +86,7 @@
   
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 207.762 81.476 0)
+    (at 204.927 82.9385 0)
     (property "Reference" "MH1"
       (at 0 2.55 0)
       (layer "F.SilkS")
@@ -104,7 +104,7 @@
 
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 222.194 89.995 0)
+    (at 218.969 91.3825 0)
     (property "Reference" "MH2"
       (at 0 2.55 0)
       (layer "F.SilkS")
@@ -119,16 +119,16 @@
     )
   )
   
-  (gr_line (start 205.113 93.951) (end 205.113 34.49) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 205.613 33.99) (end 224.333 33.99) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 224.833 34.49) (end 224.833 93.951) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 224.333 94.451) (end 205.613 94.451) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_arc (start 205.613 33.99) (mid 205.2594466 34.1364466) (end 205.113 34.49) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_arc (start 224.833 34.49) (mid 224.6865534 34.1364466) (end 224.333 33.99) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_arc (start 224.333 94.451) (mid 224.6865534 94.30455339999999) (end 224.833 93.951) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_arc (start 205.113 93.951) (mid 205.2594466 94.30455339999999) (end 205.613 94.451) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_circle (center 207.762 81.476) (end 208.862 81.476) (layer Edge.Cuts) (stroke (width 0.15) (type default)) (fill none))
-(gr_circle (center 222.194 89.995) (end 223.29399999999998 89.995) (layer Edge.Cuts) (stroke (width 0.15) (type default)) (fill none))
+  (gr_line (start 202.348 94.3635) (end 202.348 39.7025) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 202.848 39.2025) (end 221.068 39.2025) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 221.568 39.7025) (end 221.568 94.3635) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 221.068 94.8635) (end 202.848 94.8635) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_arc (start 202.848 39.2025) (mid 202.4944466 39.3489466) (end 202.348 39.7025) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_arc (start 221.568 39.7025) (mid 221.42155340000002 39.3489466) (end 221.068 39.2025) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_arc (start 221.068 94.8635) (mid 221.42155340000002 94.7170534) (end 221.568 94.3635) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_arc (start 202.348 94.3635) (mid 202.4944466 94.7170534) (end 202.848 94.8635) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_circle (center 204.927 82.9385) (end 206.027 82.9385) (layer Edge.Cuts) (stroke (width 0.15) (type default)) (fill none))
+(gr_circle (center 218.969 91.3825) (end 220.069 91.3825) (layer Edge.Cuts) (stroke (width 0.15) (type default)) (fill none))
 
 )
 
