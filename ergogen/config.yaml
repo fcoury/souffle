@@ -133,74 +133,74 @@ points:
             column_net: C0
           rows:
             number.key:
-              led_prev: LED_23
-              led_next: LED_24
+              led_prev: LED_31
+              led_next: LED_32
             top.key:
-              led_prev: LED_24
-              led_next: LED_25
+              led_prev: LED_32
+              led_next: LED_33
             home.key:
-              led_prev: LED_25
-              led_next: LED_26
+              led_prev: LED_33
+              led_next: LED_34
             bottom.key:
-              led_prev: LED_26
-              led_next: LED_27
+              led_prev: LED_34
+              led_next: LED_35
         pinky:
           key:
             column_net: C1
           rows:
             number.key: # Added number row
-              led_prev: LED_23
-              led_next: LED_22
+              led_prev: LED_29
+              led_next: LED_30
             top.key:
-              led_prev: LED_22
-              led_next: LED_21
+              led_prev: LED_28
+              led_next: LED_29
             home.key:
-              led_prev: LED_21
-              led_next: LED_20
+              led_prev: LED_27
+              led_next: LED_28
             bottom.key:
-              led_prev: LED_18
-              led_next: LED_19
+              led_prev: LED_26
+              led_next: LED_27
         ring:
           key:
             stagger: 0.25 kp
             column_net: C2
           rows:
             number.key: # Added number row
-              led_prev: LED_14 # Adjust LED chain
-              led_next: LED_15
+              led_prev: LED_22
+              led_next: LED_23
             top.key:
-              led_prev: LED_15
-              led_next: LED_16
+              led_prev: LED_23
+              led_next: LED_24
             home.key:
-              led_prev: LED_16
-              led_next: LED_17
+              led_prev: LED_24
+              led_next: LED_25
             bottom.key:
-              led_prev: LED_17
-              led_next: LED_18
+              led_prev: LED_25
+              led_next: LED_26
         middle:
           key:
             stagger: 0.125 kp
             column_net: C3
           rows:
             number.key:
-              led_prev: LED_13 # Adjust LED chain
-              led_next: LED_14
+              led_prev: LED_21
+              led_next: LED_22
             top.key:
-              led_prev: LED_12
-              led_next: LED_13
+              led_prev: LED_20
+              led_next: LED_21
             home.key:
-              led_prev: LED_11
-              led_next: LED_12
+              led_prev: LED_19
+              led_next: LED_20
             bottom.key:
-              led_prev: LED_10
-              led_next: LED_11
+              led_prev: LED_18
+              led_next: LED_19
         index:
           key:
             stagger: -0.125 kp
             column_net: C4
           rows:
             number.key: # Added number row
-              led_prev: LED_5 # Adjust LED chain
+              led_prev: LED_5
               led_next: LED_6
             top.key:
               led_prev: LED_6
@@ -217,7 +217,7 @@ points:
             column_net: C5
           rows:
             number.key: # Added number row
-              led_prev: LED_4 # Adjust LED chain
+              led_prev: LED_4
               led_next: LED_5
             top.key:
               led_prev: LED_3
@@ -256,24 +256,24 @@ points:
             shift: [-0.2 ks, 0.2 kp] # Shift inward key INWARDS and slightly up, fine-tuned
           rows:
             home.key:
-              led_prev: LED_27 # Continue LED numbering
-              led_next: LED_28
-        middle: # Middle thumb key
+              led_prev: LED_17
+              led_next: LED_18
+        mid: # Middle thumb key
           key:
             column_net: C2
             shift: [-0.2 ks, 0.4 kp] # Shift inward key INWARDS and slightly up, fine-tuned
           rows:
             home.key:
-              led_prev: LED_28
-              led_next: LED_29
+              led_prev: LED_16
+              led_next: LED_17
         outward: # Outward thumb key
           key:
             column_net: C3
             shift: [-0.2 ks, 0.4 kp] # Shift inward key INWARDS and slightly up, fine-tuned
           rows:
             home.key:
-              led_prev: LED_30
-              led_next: LED_31
+              led_prev: LED_15
+              led_next: LED_16
         extra_outward: # Extra outward thumb key
           key:
             column_net: C4
@@ -281,8 +281,8 @@ points:
             splay: -15
           rows:
             home.key:
-              led_prev: LED_31
-              led_next: LED_32
+              led_prev: LED_14
+              led_next: LED_15
         big_outward: # The space/enter key 1.5u
           key:
             column_net: C5
@@ -292,8 +292,8 @@ points:
               - key_1_5u
           rows:
             home.key:
-              led_prev: LED_32
-              led_next: LED_33
+              led_prev: ULED_6
+              led_next: LED_1
 
       rows:
         home:
@@ -590,7 +590,7 @@ outlines:
           shift: [0.3 kp, -0.2 kp]
 
         # --- Thumb Cluster Contour --- (New points to follow thumb keys)
-        # cols: inward, middle, outward, extra_outward, big_outward
+        # cols: inward, mid, outward, extra_outward, big_outward
         # rows: home
         - ref: thumbfan_big_outward_home # Start of thumb cluster contour
           shift: [0.6 kp, -0.6 kp] # Adjusted: Closer to key, more down
@@ -598,7 +598,7 @@ outlines:
           shift: [-0.6 kp, -0.5 kp] # Adjusted: Closer to key, more down
         - ref: thumbfan_outward_home
           shift: [-0.5 kp, -0.6 kp] # Adjusted: Closer to key, less down
-        - ref: thumbfan_middle_home
+        - ref: thumbfan_mid_home
           shift: [-0.4 kp, -0.8 kp] # Adjusted: Closer to key, less down
         - ref: thumbfan_inward_home # End of thumb cluster contour
           shift: [-0.5 kp, -0.6 kp] # Adjusted: Closer to key, aligned horizontally
@@ -892,7 +892,6 @@ pcbs:
           P18: C3
           P15: C4
           P14: C5
-          P16: C6
           P2: SDA
           P3: SCL
           P4: CS
@@ -900,13 +899,15 @@ pcbs:
           P6: R1
           P7: R2
           P8: R3
-          P9: R4
+          P101: R4
           reversible: true
           include_traces: true
           show_silk_labels: true
           show_via_labels: true
           show_instructions: false
           use_rectangular_jumpers: true
+          include_extra_pins: true
+          only_required_jumpers: true
         adjust:
           shift: [19.704, 0.375 kp -18.37]
 
