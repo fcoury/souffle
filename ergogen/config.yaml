@@ -486,7 +486,7 @@ points:
         - screw
       anchor:
         - ref: matrix_inner_bottom
-          shift: [1.45 ks - 0.356, -0.6 ks +0.03] # Adjust shift if needed
+          shift: [1.45 ks - 0.356, -0.6 ks -0.03] # Adjust shift if needed
 
 outlines:
   _debug_points:
