@@ -397,7 +397,7 @@ points:
       key.tags:
         - helper
       anchor:
-        - ref: matrix_inner_top
+        - ref: matrix_inner_number
           shift: [ks * 0.53 + 0.043, kp * 0.35 - 0.015] # Adjust shift if needed
     mcu_cover_top_right: # Likely needs adjustments for Souffle
       key.tags:
@@ -419,19 +419,25 @@ points:
         - ref: mcu_cover_top_left
           shift: [0, -kp * 3.2 + 0.339] # Use the same vertical shift as mcu_cover_bottom_right
 
+    plate_additional_outline_number:
+      key.tags:
+        - helper
+      anchor:
+        - ref: mcu_cover_top_left
+          shift: [-1.03, 0] # Adjust shift if needed
     plate_additional_outline_top: # Likely needs adjustments for Souffle
       key.tags:
         - helper
       anchor:
         - ref: mcu_cover_top_left
           shift: [-1.03, 0] # Adjust shift if needed
-    plate_additional_outline_bottom_right: # Likely needs adjustments for Souffle
+    plate_additional_outline_bottom_right: # Bottom right of the mcu cover
       key.tags:
         - helper
       anchor:
         - ref: mcu_cover_bottom_right
           shift: [-0.63, 0] # Adjust shift if needed
-    plate_additional_outline_bottom_left: # Modified to be defined by shift instead of intersect
+    plate_additional_outline_bottom_left:
       key.tags:
         - helper
       anchor:
@@ -473,20 +479,20 @@ points:
       anchor:
         - ref: thumbfan_extra_outward_home # Refer to the new thumb cluster zone
           shift: [0, 0.5 kp +2.631] # Adjust shift if needed
-    screw_mcu_cover_left: # Likely needs adjustments for Souffle
-      key.tags:
-        - helper
-        - screw
-      anchor:
-        - ref: matrix_inner_bottom
-          shift: [0.67 ks + 0.032, -0.15 kp -0.001] # Adjust shift if needed
-    screw_mcu_cover_right: # Likely needs adjustments for Souffle
-      key.tags:
-        - helper
-        - screw
-      anchor:
-        - ref: matrix_inner_bottom
-          shift: [1.45 ks - 0.356, -0.6 ks -0.03] # Adjust shift if needed
+    # screw_mcu_cover_left: # Likely needs adjustments for Souffle
+    #   key.tags:
+    #     - helper
+    #     - screw
+    #   anchor:
+    #     - ref: matrix_inner_bottom
+    #       shift: [0.67 ks + 0.032, -0.15 kp -0.001] # Adjust shift if needed
+    # screw_mcu_cover_right: # Likely needs adjustments for Souffle
+    #   key.tags:
+    #     - helper
+    #     - screw
+    #   anchor:
+    #     - ref: matrix_inner_bottom
+    #       shift: [1.45 ks - 0.356, -0.6 ks -0.03] # Adjust shift if needed
 
 outlines:
   _debug_points:
@@ -585,23 +591,23 @@ outlines:
         - ref: matrix_inner_number
           shift: [ks * 0.478, kp * 0.468 - 0.005]
 
-        - ref: plate_additional_outline_top
-        - ref: plate_additional_outline_bottom_right
-          shift: [0.3 kp, -0.2 kp]
-
+        - ref: mcu_cover_top_right
+          # shift: [1, -2]
+        - ref: mcu_cover_bottom_right
+          shift: [0, -30]
         # --- Thumb Cluster Contour --- (New points to follow thumb keys)
         # cols: inward, mid, outward, extra_outward, big_outward
         # rows: home
         - ref: thumbfan_big_outward_home # Start of thumb cluster contour
-          shift: [0.6 kp, -0.6 kp] # Adjusted: Closer to key, more down
-        - ref: thumbfan_extra_outward_home # Start of thumb cluster contour
-          shift: [-0.6 kp, -0.5 kp] # Adjusted: Closer to key, more down
+          shift: [0.55 kp, -0.6 kp]
+        - ref: thumbfan_extra_outward_home
+          shift: [-0.6 kp, -0.5 kp]
         - ref: thumbfan_outward_home
-          shift: [-0.5 kp, -0.6 kp] # Adjusted: Closer to key, less down
+          shift: [-0.5 kp, -0.6 kp]
         - ref: thumbfan_mid_home
-          shift: [-0.4 kp, -0.8 kp] # Adjusted: Closer to key, less down
-        - ref: thumbfan_inward_home # End of thumb cluster contour
-          shift: [-0.5 kp, -0.6 kp] # Adjusted: Closer to key, aligned horizontally
+          shift: [-0.4 kp, -0.8 kp]
+        - ref: thumbfan_inward_home
+          shift: [-0.5 kp, -0.6 kp]
 
         # --- Bottom Row Contour --- (New points to follow bottom row keys)
         # cols: outer, pinky, ring, middle, index, inner
@@ -621,7 +627,7 @@ outlines:
         # - ref: plate_outline_bottom_2
         # - ref: plate_outline_bottom_3
         # - ref: plate_outline_bottom_4
-  _plate_outline: # Likely needs adjustments for Souffle thumb cluster
+  _plate_outline:
     - what: outline
       name: _matrix_outline
     - what: polygon
@@ -795,7 +801,7 @@ pcbs:
           hole_size: screw_diameter
           hole_drill: screw_diameter
 
-  _souffle_baseline: # Renamed from _corney_island_baseline
+  _souffle_baseline:
     template: kicad8
     outlines: &basepcb_outlines
       main:
@@ -882,7 +888,7 @@ pcbs:
 
       mcu:
         what: ceoloide/mcu_nice_nano
-        where: matrix_inner_top
+        where: matrix_inner_number
         params:
           P0: DAT
           P1: LED
@@ -899,7 +905,7 @@ pcbs:
           P6: R1
           P7: R2
           P8: R3
-          P101: R4
+          P9: R4
           reversible: true
           include_traces: true
           show_silk_labels: true
@@ -931,7 +937,7 @@ pcbs:
 
       display:
         what: ceoloide/display_ssd1306
-        where: matrix_inner_top
+        where: matrix_inner_number
         params:
           reversible: true
         adjust:
@@ -939,7 +945,7 @@ pcbs:
 
       reset_switch:
         what: ceoloide/reset_switch_tht_top
-        where: matrix_inner_top
+        where: matrix_inner_number
         params:
           from: GND
           to: RST
@@ -950,7 +956,7 @@ pcbs:
 
       trrs:
         what: ceoloide/trrs_pj320a
-        where: matrix_inner_top
+        where: matrix_inner_number
         params:
           SL: GND
           R2: DAT
@@ -1015,7 +1021,7 @@ pcbs:
 
       nice_view:
         what: ceoloide/display_nice_view
-        where: matrix_inner_top
+        where: matrix_inner_number
         params:
           MOSI: SDA
           SCK: SCL
@@ -1027,7 +1033,7 @@ pcbs:
 
       on_off_switch:
         what: ceoloide/power_switch_smd_side
-        where: matrix_inner_top
+        where: matrix_inner_number
         params:
           from: BAT_P
           to: RAW
@@ -1037,7 +1043,7 @@ pcbs:
 
       reset_switch:
         what: ceoloide/reset_switch_smd_side
-        where: matrix_inner_top
+        where: matrix_inner_number
         params:
           from: GND
           to: RST
@@ -1048,7 +1054,7 @@ pcbs:
 
       battery_connector:
         what: ceoloide/battery_connector_jst_ph_2
-        where: matrix_inner_top
+        where: matrix_inner_number
         params:
           BAT_P: BAT_P
           BAT_N: GND
