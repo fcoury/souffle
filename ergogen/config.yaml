@@ -116,7 +116,7 @@ units:
 
 points:
   zones:
-    # Main key matrix - unchanged from Corney Island as Souffle has similar matrix
+    # Main key matrix
     matrix:
       key:
         padding: kp
@@ -132,68 +132,68 @@ points:
           key:
             column_net: C0
           rows:
-            number.key: # Added number row
-              led_prev: LED_19 # Adjust LED chain
-              led_next: LED_18
+            number.key:
+              led_prev: LED_23
+              led_next: LED_24
             top.key:
-              led_prev: LED_18
-              led_next: LED_19
+              led_prev: LED_24
+              led_next: LED_25
             home.key:
-              led_prev: LED_19
-              led_next: LED_20
+              led_prev: LED_25
+              led_next: LED_26
             bottom.key:
-              led_prev: LED_20
-              led_next: LED_21
+              led_prev: LED_26
+              led_next: LED_27
         pinky:
           key:
             column_net: C1
           rows:
             number.key: # Added number row
-              led_prev: LED_16 # Adjust LED chain
-              led_next: LED_17
+              led_prev: LED_23
+              led_next: LED_22
             top.key:
-              led_prev: LED_17
-              led_next: LED_18
+              led_prev: LED_22
+              led_next: LED_21
             home.key:
-              led_prev: LED_16
-              led_next: LED_17
+              led_prev: LED_21
+              led_next: LED_20
             bottom.key:
-              led_prev: LED_15
-              led_next: LED_16
+              led_prev: LED_18
+              led_next: LED_19
         ring:
           key:
             stagger: 0.25 kp
             column_net: C2
           rows:
             number.key: # Added number row
-              led_prev: LED_13 # Adjust LED chain
-              led_next: LED_12
-            top.key:
-              led_prev: LED_12
-              led_next: LED_13
-            home.key:
-              led_prev: LED_13
-              led_next: LED_14
-            bottom.key:
-              led_prev: LED_14
+              led_prev: LED_14 # Adjust LED chain
               led_next: LED_15
+            top.key:
+              led_prev: LED_15
+              led_next: LED_16
+            home.key:
+              led_prev: LED_16
+              led_next: LED_17
+            bottom.key:
+              led_prev: LED_17
+              led_next: LED_18
         middle:
           key:
             stagger: 0.125 kp
             column_net: C3
           rows:
-            number.key: # Added number row
-              led_prev: LED_12 # Adjust LED chain
-              led_next: LED_11
+            number.key:
+              led_prev: LED_13 # Adjust LED chain
+              led_next: LED_14
             top.key:
+              led_prev: LED_12
+              led_next: LED_13
+            home.key:
               led_prev: LED_11
               led_next: LED_12
-            home.key:
+            bottom.key:
               led_prev: LED_10
               led_next: LED_11
-            bottom.key:
-              led_prev: LED_9
-              led_next: LED_10
         index:
           key:
             stagger: -0.125 kp
@@ -201,16 +201,16 @@ points:
           rows:
             number.key: # Added number row
               led_prev: LED_5 # Adjust LED chain
-              led_next: LED_4
-            top.key:
-              led_prev: LED_4
-              led_next: LED_5
-            home.key:
-              led_prev: LED_5
               led_next: LED_6
-            bottom.key:
+            top.key:
               led_prev: LED_6
               led_next: LED_7
+            home.key:
+              led_prev: LED_7
+              led_next: LED_8
+            bottom.key:
+              led_prev: LED_9
+              led_next: LED_10
         inner:
           key:
             stagger: -0.125 kp
@@ -218,7 +218,7 @@ points:
           rows:
             number.key: # Added number row
               led_prev: LED_4 # Adjust LED chain
-              led_next: LED_3
+              led_next: LED_5
             top.key:
               led_prev: LED_3
               led_next: LED_4
@@ -230,15 +230,15 @@ points:
               led_next: LED_2
       rows:
         bottom:
-          row_net: R2
+          row_net: R3
         home:
-          row_net: R1
+          row_net: R2
         top:
+          row_net: R1
+        number:
           row_net: R0
-        number: # Define the new 'number' row
-          row_net: R4 # or R4, choose based on your wiring and MCU config
 
-    thumb_cluster:
+    thumbfan:
       key:
         padding: kp
         spread: ks
@@ -252,52 +252,52 @@ points:
       columns:
         inward: # Closest thumb key to the main matrix
           key:
-            column_net: C6 # New column nets for thumb cluster
+            column_net: C1
             shift: [-0.2 ks, 0.2 kp] # Shift inward key INWARDS and slightly up, fine-tuned
           rows:
             home.key:
-              led_prev: LED_21 # Continue LED numbering
-              led_next: LED_22
+              led_prev: LED_27 # Continue LED numbering
+              led_next: LED_28
         middle: # Middle thumb key
           key:
-            column_net: C7
+            column_net: C2
             shift: [-0.2 ks, 0.4 kp] # Shift inward key INWARDS and slightly up, fine-tuned
           rows:
             home.key:
-              led_prev: LED_22
-              led_next: LED_23
+              led_prev: LED_28
+              led_next: LED_29
         outward: # Outward thumb key
           key:
-            column_net: C8
+            column_net: C3
             shift: [-0.2 ks, 0.4 kp] # Shift inward key INWARDS and slightly up, fine-tuned
           rows:
             home.key:
-              led_prev: LED_23
-              led_next: LED_24
+              led_prev: LED_30
+              led_next: LED_31
         extra_outward: # Extra outward thumb key
           key:
-            column_net: C9
+            column_net: C4
             shift: [-0.2 ks, 0 kp] # Shift inward key INWARDS and slightly up, fine-tuned
             splay: -15
           rows:
             home.key:
-              led_prev: LED_24
-              led_next: LED_25
+              led_prev: LED_31
+              led_next: LED_32
         big_outward: # The space/enter key 1.5u
           key:
-            column_net: C10
+            column_net: C5
             shift: [-0.1 ks, -0.2kp]
             splay: -15
             tags:
               - key_1_5u
           rows:
             home.key:
-              led_prev: LED_25
-              led_next: LED_24
+              led_prev: LED_32
+              led_next: LED_33
 
       rows:
         home:
-          row_net: R3 # New row net for thumb cluster
+          row_net: R4 # New row net for thumb cluster
 
     # Helper points - likely needs adjustments for Souffle layout
     underglow_led_1: # Needs repositioning for Souffle
@@ -376,20 +376,20 @@ points:
       key.tags:
         - helper
       anchor:
-        - ref: thumb_cluster_inward_home # Refer to the new thumb cluster zone
+        - ref: thumbfan_inward_home # Refer to the new thumb cluster zone
           shift: [-ks * 0.47 - 0.01, -kp * 0.475 - 0.05] # Adjust shift if needed
     plate_outline_bottom_3: # Likely needs adjustments for Souffle
       key.tags:
         - helper
       anchor:
-        - ref: thumb_cluster_extra_outward_home # Refer to the new thumb cluster zone
+        - ref: thumbfan_extra_outward_home # Refer to the new thumb cluster zone
           shift: [-ks * 0.725 - 0.028, kp * 0.475 - 0.009] # Adjust shift if needed
           affect: ["x", "y"]
     plate_outline_bottom_4: # Likely needs adjustments for Souffle
       key.tags:
         - helper
       anchor:
-        - ref: thumb_cluster_extra_outward_home # Refer to the new thumb cluster zone
+        - ref: thumbfan_extra_outward_home # Refer to the new thumb cluster zone
           shift: [-ks * 0.725 - 0.028, -kp * 0.48 + 0.023] # Adjust shift if needed
           affect: ["x", "y"]
 
@@ -464,14 +464,14 @@ points:
         - helper
         - screw
       anchor:
-        - ref: thumb_cluster_inward_home # Refer to the new thumb cluster zone
+        - ref: thumbfan_inward_home # Refer to the new thumb cluster zone
           shift: [-0.5 ks -4.343, kp * 0.375 +0.01] # Adjust shift if needed
     screw_pcb_thumbfan_right: # Needs to be renamed and repositioned for Souffle
       key.tags:
         - helper
         - screw
       anchor:
-        - ref: thumb_cluster_extra_outward_home # Refer to the new thumb cluster zone
+        - ref: thumbfan_extra_outward_home # Refer to the new thumb cluster zone
           shift: [0, 0.5 kp +2.631] # Adjust shift if needed
     screw_mcu_cover_left: # Likely needs adjustments for Souffle
       key.tags:
@@ -592,15 +592,15 @@ outlines:
         # --- Thumb Cluster Contour --- (New points to follow thumb keys)
         # cols: inward, middle, outward, extra_outward, big_outward
         # rows: home
-        - ref: thumb_cluster_big_outward_home # Start of thumb cluster contour
+        - ref: thumbfan_big_outward_home # Start of thumb cluster contour
           shift: [0.6 kp, -0.6 kp] # Adjusted: Closer to key, more down
-        - ref: thumb_cluster_extra_outward_home # Start of thumb cluster contour
+        - ref: thumbfan_extra_outward_home # Start of thumb cluster contour
           shift: [-0.6 kp, -0.5 kp] # Adjusted: Closer to key, more down
-        - ref: thumb_cluster_outward_home
+        - ref: thumbfan_outward_home
           shift: [-0.5 kp, -0.6 kp] # Adjusted: Closer to key, less down
-        - ref: thumb_cluster_middle_home
+        - ref: thumbfan_middle_home
           shift: [-0.4 kp, -0.8 kp] # Adjusted: Closer to key, less down
-        - ref: thumb_cluster_inward_home # End of thumb cluster contour
+        - ref: thumbfan_inward_home # End of thumb cluster contour
           shift: [-0.5 kp, -0.6 kp] # Adjusted: Closer to key, aligned horizontally
 
         # --- Bottom Row Contour --- (New points to follow bottom row keys)
@@ -886,21 +886,21 @@ pcbs:
         params:
           P0: DAT
           P1: LED
-          P21: C0 # Main matrix columns - unchanged
+          P21: C0
           P20: C1
           P19: C2
           P18: C3
           P15: C4
           P14: C5
-          P16: C7 # Re-assign thumb cluster columns to correct pins
+          P16: C6
           P2: SDA
           P3: SCL
           P4: CS
-          P5: R0 # Rows - unchanged
+          P5: R0
           P6: R1
           P7: R2
-          P8: R-1 # New row for number row, changed from R3 to R-1
-          P9: R3 # Thumb cluster row now assigned to P9, shifted from P8 to P9
+          P8: R3
+          P9: R4
           reversible: true
           include_traces: true
           show_silk_labels: true
@@ -928,15 +928,15 @@ pcbs:
     footprints:
       <<: *basepcb_footprints
 
-      display: # Keep display if Souffle has one, otherwise remove
+      display:
         what: ceoloide/display_ssd1306
         where: matrix_inner_top
         params:
           reversible: true
         adjust:
-          shift: [0.5 ks + 10.147, 0.375 kp -24.058] # Adjust shift if needed
+          shift: [0.5 ks + 10.147, 0.375 kp -24.058]
 
-      reset_switch: # Keep reset switch
+      reset_switch:
         what: ceoloide/reset_switch_tht_top
         where: matrix_inner_top
         params:
@@ -944,10 +944,10 @@ pcbs:
           to: RST
           reversible: true
         adjust:
-          shift: [0.5 ks + 17.85, 0.375 kp -40.251] # Adjust shift if needed
+          shift: [0.5 ks + 17.85, 0.375 kp -40.251]
           rotate: 90
 
-      trrs: # Keep TRRS if Souffle is split, otherwise remove or change to USB-C
+      trrs:
         what: ceoloide/trrs_pj320a
         where: matrix_inner_top
         params:
@@ -957,10 +957,10 @@ pcbs:
           reversible: true
           symmetric: true
         adjust:
-          shift: [0.5 ks +19.61, 0.375 kp -50.31] # Adjust shift if needed
+          shift: [0.5 ks +19.61, 0.375 kp -50.31]
           rotate: -90
 
-      per_key_leds: # Keep per-key LEDs if Souffle has them
+      per_key_leds:
         what: ceoloide/led_sk6812mini-e
         where: /key/
         params:
@@ -982,7 +982,7 @@ pcbs:
           shift: [led_pos_x, led_pos_y]
           rotate: led_rotation
 
-      underglow_leds: # Keep underglow LEDs if Souffle has them
+      underglow_leds:
         what: ceoloide/led_sk6812mini-e
         where: [underglow]
         params:
@@ -1003,7 +1003,7 @@ pcbs:
         adjust:
           rotate: 180
 
-  souffle_wireless: # Adapt wireless version if needed, based on Souffle wireless version if it exists
+  souffle_wireless:
     template: kicad8
 
     outlines:
@@ -1012,7 +1012,7 @@ pcbs:
     footprints:
       <<: *basepcb_footprints
 
-      nice_view: # Keep nice view display if wireless Souffle has one
+      nice_view:
         what: ceoloide/display_nice_view
         where: matrix_inner_top
         params:
@@ -1024,7 +1024,7 @@ pcbs:
         adjust:
           shift: [0.5 ks + 10.147, 0.375 kp -20.75] # Adjust shift if needed
 
-      on_off_switch: # Keep on/off switch for wireless version
+      on_off_switch:
         what: ceoloide/power_switch_smd_side
         where: matrix_inner_top
         params:
@@ -1034,7 +1034,7 @@ pcbs:
         adjust:
           shift: [1.5 ks -0.5, 0.375 kp -46.50] # Adjust shift if needed
 
-      reset_switch: # Keep reset switch for wireless version
+      reset_switch:
         what: ceoloide/reset_switch_smd_side
         where: matrix_inner_top
         params:
@@ -1045,7 +1045,7 @@ pcbs:
         adjust:
           shift: [19.704, 0.24 kp - 0.1] # Adjust shift if needed
 
-      battery_connector: # Keep battery connector for wireless version
+      battery_connector:
         what: ceoloide/battery_connector_jst_ph_2
         where: matrix_inner_top
         params:
@@ -1057,7 +1057,7 @@ pcbs:
           shift: [0.5 ks + 7.25, 0.375 kp -45.25] # Adjust shift if needed
           rotate: 90
 cases:
-  souffle_bottom_tray: # Adapt case for Souffle thumb cluster
+  souffle_bottom_tray:
     - what: outline
       name: _bottom_case_walls
       extrude: bottom_plate_thickness + internal_distance_between_plates + top_plate_thickness
