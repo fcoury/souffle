@@ -40,7 +40,7 @@ presets:
     # Key and keycap measures
     kx: cx # spacing between key centers (X-axis)
     ky: cy # spacing between key centers (Y-axis)
-    ks: 18.5 # horizontal space between columns (default: 19)
+    ks: 19 # horizontal space between columns (default: 19)
     kp: 17.5 # vertical padding between keys (deafult: 19)
     kcow: 13.8 # key cutout hole width (cherry, choc v2: 14, choc v1: 13.8)
     kcoh: 13.8 # key cutout hole height (cherry, choc v2: 14, choc v1: 13.8)
@@ -309,7 +309,7 @@ points:
         dout: ULED_1
       anchor:
         - ref: matrix_inner_top
-          shift: [0, vertical_underglow_shift] # Adjust shift if needed
+          shift: [0, vertical_underglow_shift]
 
     underglow_led_2: # Needs repositioning for Souffle
       key:
@@ -320,7 +320,7 @@ points:
         dout: ULED_2
       anchor:
         - ref: matrix_middle_top
-          shift: [0, vertical_underglow_shift] # Adjust shift if needed
+          shift: [0, vertical_underglow_shift]
 
     underglow_led_3: # Needs repositioning for Souffle
       key:
@@ -331,7 +331,7 @@ points:
         dout: ULED_3
       anchor:
         - ref: matrix_pinky_top
-          shift: [0, vertical_underglow_shift] # Adjust shift if needed
+          shift: [0, vertical_underglow_shift]
 
     underglow_led_4: # Needs repositioning for Souffle
       key:
@@ -342,7 +342,7 @@ points:
         dout: ULED_4
       anchor:
         - ref: matrix_pinky_home
-          shift: [0, vertical_underglow_shift] # Adjust shift if needed
+          shift: [0, vertical_underglow_shift]
 
     underglow_led_5: # Needs repositioning for Souffle
       key:
@@ -353,7 +353,7 @@ points:
         dout: ULED_5
       anchor:
         - ref: matrix_middle_bottom
-          shift: [0, vertical_underglow_shift] # Adjust shift if needed
+          shift: [0, vertical_underglow_shift]
 
     underglow_led_6: # Needs repositioning for Souffle
       key:
@@ -364,53 +364,53 @@ points:
         dout: ULED_6
       anchor:
         - ref: matrix_inner_bottom
-          shift: [0, vertical_underglow_shift] # Adjust shift if needed
+          shift: [0, vertical_underglow_shift]
 
-    plate_outline_bottom_1: # Likely needs adjustments for Souffle
+    plate_outline_bottom_1:
       key.tags:
         - helper
       anchor:
         - ref: matrix_ring_bottom
-          shift: [ks * 0.465 + 0.005, -kp * 0.74 + 0.07] # Adjust shift if needed
-    plate_outline_bottom_2: # Likely needs adjustments for Souffle
+          shift: [ks * 0.465 + 0.005, -kp * 0.74 + 0.07]
+    plate_outline_bottom_2:
       key.tags:
         - helper
       anchor:
         - ref: thumbfan_inward_home # Refer to the new thumb cluster zone
-          shift: [-ks * 0.47 - 0.01, -kp * 0.475 - 0.05] # Adjust shift if needed
-    plate_outline_bottom_3: # Likely needs adjustments for Souffle
+          shift: [-ks * 0.47 - 0.01, -kp * 0.475 - 0.05]
+    plate_outline_bottom_3:
       key.tags:
         - helper
       anchor:
         - ref: thumbfan_extra_outward_home # Refer to the new thumb cluster zone
-          shift: [-ks * 0.725 - 0.028, kp * 0.475 - 0.009] # Adjust shift if needed
+          shift: [-ks * 0.725 - 0.028, kp * 0.475 - 0.009]
           affect: ["x", "y"]
-    plate_outline_bottom_4: # Likely needs adjustments for Souffle
+    plate_outline_bottom_4:
       key.tags:
         - helper
       anchor:
         - ref: thumbfan_extra_outward_home # Refer to the new thumb cluster zone
-          shift: [-ks * 0.725 - 0.028, -kp * 0.48 + 0.023] # Adjust shift if needed
+          shift: [-ks * 0.725 - 0.028, -kp * 0.48 + 0.023]
           affect: ["x", "y"]
 
-    mcu_cover_top_left: # Likely needs adjustments for Souffle
+    mcu_cover_top_left:
       key.tags:
         - helper
       anchor:
         - ref: matrix_inner_number
-          shift: [ks * 0.53 + 0.043, kp * 0.35 - 0.015] # Adjust shift if needed
-    mcu_cover_top_right: # Likely needs adjustments for Souffle
+          shift: [ks * 0.53 + 0.043, kp * 0.35 - 0.015]
+    mcu_cover_top_right:
       key.tags:
         - helper
       anchor:
         - ref: mcu_cover_top_left
-          shift: [ks + 0.72, 0] # Adjust shift if needed
-    mcu_cover_bottom_right: # Likely needs adjustments for Souffle
+          shift: [ks + 0.72, 0]
+    mcu_cover_bottom_right:
       key.tags:
         - helper
       anchor:
         - ref: mcu_cover_top_right
-          shift: [0, -kp * 3.2 + 0.339] # Adjust shift if needed
+          shift: [0, -kp * 3.2 + 0.339]
           rotate: 0 # Thumb splay rotation removed for Souffle
     mcu_cover_bottom_left: # Modified to be defined by shift instead of intersect
       key.tags:
@@ -424,19 +424,19 @@ points:
         - helper
       anchor:
         - ref: mcu_cover_top_left
-          shift: [-1.03, 0] # Adjust shift if needed
-    plate_additional_outline_top: # Likely needs adjustments for Souffle
+          shift: [-1.03, 0]
+    plate_additional_outline_top:
       key.tags:
         - helper
       anchor:
         - ref: mcu_cover_top_left
-          shift: [-1.03, 0] # Adjust shift if needed
+          shift: [-1.03, 0]
     plate_additional_outline_bottom_right: # Bottom right of the mcu cover
       key.tags:
         - helper
       anchor:
         - ref: mcu_cover_bottom_right
-          shift: [-0.63, 0] # Adjust shift if needed
+          shift: [-0.63, 0]
     plate_additional_outline_bottom_left:
       key.tags:
         - helper
@@ -444,55 +444,63 @@ points:
         - ref: plate_additional_outline_top
           shift: [0, -kp * 3.2 + 0.339] # Use the same vertical shift as mcu_cover_bottom_right
 
-    screw_pcb_left_top: # Likely needs adjustments for Souffle
+    screw_pcb_left_top:
       key.tags:
         - helper
         - screw
       anchor:
-        - ref: matrix_pinky_top
-          shift: [-0.5 ks, -0.5 kp] # Adjust shift if needed
-    screw_pcb_left_bottom: # Likely needs adjustments for Souffle
+        - ref: matrix_pinky_number
+          shift: [-0.5 ks, -0.5 kp]
+    screw_pcb_left_bottom:
       key.tags:
         - helper
         - screw
       anchor:
         - ref: matrix_pinky_home
-          shift: [-0.5 ks, -0.5 kp] # Adjust shift if needed
-    screw_pcb_right_top: # Likely needs adjustments for Souffle
+          shift: [-0.5 ks, -0.5 kp]
+    screw_pcb_right_top:
       key.tags:
         - helper
         - screw
       anchor:
-        - ref: matrix_inner_top
-          shift: [-0.5 ks -0.032, -0.5 kp +1.139] # Adjust shift if needed
+        - ref: matrix_inner_number
+          shift: [-0.5 ks -0.432, -0.5 kp +2.239]
+    screw_pcb_right_bottom:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        - ref: matrix_inner_home
+          shift: [-0.5 ks -0.432, -0.5 kp +2.239]
+          # shift: [-0.5 ks -0.032, -0.5 kp +1.139]
     screw_pcb_thumbfan_left: # Needs to be renamed and repositioned for Souffle
       key.tags:
         - helper
         - screw
       anchor:
         - ref: thumbfan_inward_home # Refer to the new thumb cluster zone
-          shift: [-0.5 ks -4.343, kp * 0.375 +0.01] # Adjust shift if needed
-    screw_pcb_thumbfan_right: # Needs to be renamed and repositioned for Souffle
-      key.tags:
-        - helper
-        - screw
-      anchor:
-        - ref: thumbfan_extra_outward_home # Refer to the new thumb cluster zone
-          shift: [0, 0.5 kp +2.631] # Adjust shift if needed
-    # screw_mcu_cover_left: # Likely needs adjustments for Souffle
+          shift: [-0.5 ks -4.343, kp * 0.375 +0.01]
+    # screw_pcb_thumbfan_right: # Disabled to match roughly screws for Soufle V2
+    #   key.tags:
+    #     - helper
+    #     - screw
+    #   anchor:
+    #     - ref: thumbfan_extra_outward_home # Refer to the new thumb cluster zone
+    #       shift: [0, 0.5 kp +2.631]
+    # screw_mcu_cover_left:
     #   key.tags:
     #     - helper
     #     - screw
     #   anchor:
     #     - ref: matrix_inner_bottom
-    #       shift: [0.67 ks + 0.032, -0.15 kp -0.001] # Adjust shift if needed
-    # screw_mcu_cover_right: # Likely needs adjustments for Souffle
+    #       shift: [0.67 ks + 0.032, -0.15 kp -0.001]
+    # screw_mcu_cover_right:
     #   key.tags:
     #     - helper
     #     - screw
     #   anchor:
     #     - ref: matrix_inner_bottom
-    #       shift: [1.45 ks - 0.356, -0.6 ks -0.03] # Adjust shift if needed
+    #       shift: [1.45 ks - 0.356, -0.6 ks -0.03]
 
 outlines:
   _debug_points:
@@ -1029,7 +1037,7 @@ pcbs:
           include_labels: false
           invert_jumpers_position: true
         adjust:
-          shift: [0.5 ks + 10.147, 0.375 kp -20.75] # Adjust shift if needed
+          shift: [0.5 ks + 10.147, 0.375 kp -20.75]
 
       on_off_switch:
         what: ceoloide/power_switch_smd_side
@@ -1039,7 +1047,7 @@ pcbs:
           to: RAW
           reversible: true
         adjust:
-          shift: [1.5 ks -0.5, 0.375 kp -45.50] # Adjust shift if needed
+          shift: [1.5 ks -0.5, 0.375 kp -45.50]
 
       reset_switch:
         what: ceoloide/reset_switch_smd_side
@@ -1050,7 +1058,7 @@ pcbs:
           reversible: true
           include_bosses: true
         adjust:
-          shift: [19.704, 0.24 kp - 0.1] # Adjust shift if needed
+          shift: [19.704, 0.24 kp - 0.1]
 
       battery_connector:
         what: ceoloide/battery_connector_jst_ph_2
@@ -1061,23 +1069,23 @@ pcbs:
           reversible: true
           include_courtyard: false
         adjust:
-          shift: [0.5 ks + 7.25, 0.375 kp -45.25] # Adjust shift if needed
+          shift: [0.5 ks + 7.25, 0.375 kp -45.25]
           rotate: 90
 cases:
   souffle_bottom_tray:
     - what: outline
       name: _bottom_case_walls
       extrude: bottom_plate_thickness + internal_distance_between_plates + top_plate_thickness
-      shift: [-75, 0, 0] # Adjust shift if needed
+      shift: [-75, 0, 0]
     - what: outline
       name: _mcu_wall_cutout
       extrude: 2.2
-      shift: [-75, 0, bottom_plate_thickness] # Adjust shift if needed
+      shift: [-75, 0, bottom_plate_thickness]
       operation: subtract
     - what: outline
       name: _bottom_case_outer_outline
       extrude: bottom_plate_thickness
-      shift: [-75, 0, 0] # Adjust shift if needed
+      shift: [-75, 0, 0]
     # - what: outline
     #   name: _bottom_case_superlight_inner_outline
     #   extrude: bottom_plate_thickness
@@ -1091,5 +1099,5 @@ cases:
     - what: outline
       name: _screws
       extrude: bottom_plate_thickness
-      shift: [-75, 0, 0] # Adjust shift if needed
+      shift: [-75, 0, 0]
       operation: subtract
