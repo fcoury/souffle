@@ -921,8 +921,9 @@ pcbs:
           show_via_labels: true
           show_instructions: false
           use_rectangular_jumpers: true
-          include_extra_pins: true
-          only_required_jumpers: true
+          # only needed if we use pins P101, P102 or P107
+          # include_extra_pins: true
+          # only_required_jumpers: true
         adjust:
           shift: [19.704, 0.375 kp -18.37]
 
