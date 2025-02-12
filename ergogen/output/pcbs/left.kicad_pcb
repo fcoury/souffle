@@ -149,7 +149,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 100 82.5 0)
+(at 100 83 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S2" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -179,7 +179,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 100 65 0)
+(at 100 66 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S3" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -209,7 +209,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 100 47.5 0)
+(at 100 49 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S4" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -239,7 +239,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 119 100 0)
+(at 117 100 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S5" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -269,7 +269,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 119 82.5 0)
+(at 117 83 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S6" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -299,7 +299,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 119 65 0)
+(at 117 66 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S7" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -329,7 +329,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 119 47.5 0)
+(at 117 49 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S8" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -359,7 +359,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 138 95.625 0)
+(at 134 95.75 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S9" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -389,7 +389,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 138 78.125 0)
+(at 134 78.75 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S10" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -419,7 +419,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 138 60.625 0)
+(at 134 61.75 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S11" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -449,7 +449,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 138 43.125 0)
+(at 134 44.75 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S12" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -479,7 +479,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 157 93.4375 0)
+(at 151 93.625 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S13" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -509,7 +509,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 157 75.9375 0)
+(at 151 76.625 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S14" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -539,7 +539,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 157 58.4375 0)
+(at 151 59.625 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S15" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -569,7 +569,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 157 40.9375 0)
+(at 151 42.625 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S16" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -599,7 +599,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 176 95.625 0)
+(at 168 95.75 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S17" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -629,7 +629,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 176 78.125 0)
+(at 168 78.75 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S18" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -659,7 +659,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 176 60.625 0)
+(at 168 61.75 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S19" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -689,7 +689,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 176 43.125 0)
+(at 168 44.75 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S20" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -719,7 +719,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 195 97.8125 0)
+(at 185 97.875 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S21" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -749,7 +749,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 195 80.3125 0)
+(at 185 80.875 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S22" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -779,7 +779,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 195 62.8125 0)
+(at 185 63.875 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S23" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -809,7 +809,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 195 45.3125 0)
+(at 185 46.875 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S24" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -839,7 +839,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 134.2 117.9375 0)
+(at 130.6 117.425 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S25" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -869,7 +869,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 153.2 114.4375 0)
+(at 147.6 114.025 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S26" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -899,7 +899,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 172.2 114.4375 0)
+(at 164.6 114.025 0)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S27" hide (at 0 0 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -929,7 +929,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 191.3294819 120.4539876 -15)
+(at 181.7158522 119.9450152 -15)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S28" hide (at 0 0 -15) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -959,7 +959,7 @@
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
 (footprint "CPG1316S01D02_reversible"
-(at 209.9571424 128.4361508 -30)
+(at 198.2484958 127.3194102 -30)
 (layer F.Cu)
 (attr smd)
 (property "Reference" "S29" hide (at 0 0 -30) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
@@ -988,22 +988,25 @@
 (generator_version "8.0")
 (model "models/PG1316S--装配体.STEP" (offset (xyz -4.75 -6.25 -10.25)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
 )
-  (gr_line (start 91.25 112.25) (end 91.08 39.2025) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 91.08 39.2025) (end 129.08 39.2015) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 129.08 39.2015) (end 129.08 34.8275) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 129.08 34.8275) (end 148.08 34.8275) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 148.08 34.8275) (end 148.08 32.7525) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 148.08 32.7525) (end 166.082 32.7525) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 166.082 32.7525) (end 166.082 34.8275) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 166.082 34.8275) (end 185.082 34.8275) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 185.082 34.8275) (end 185.082 37.123) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 185.082 37.123) (end 204.082 37.1275) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 204.082 37.1275) (end 213.04263690000002 142.3419175) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 213.04263690000002 142.3419175) (end 178.9225941 126.1882386) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 178.9225941 126.1882386) (end 163.45 124.9375) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 163.45 124.9375) (end 146.2 128.4375) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 146.2 128.4375) (end 125.44999999999999 128.4375) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 125.44999999999999 128.4375) (end 91.25 112.25) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+  (gr_line (start 91.5 108.5) (end 91.5 40.5) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 91.5 40.5) (end 125.5 40.5) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 125.5 40.5) (end 125.5 36.25) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 125.5 36.25) (end 142.5 36.25) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 142.5 36.25) (end 142.5 34.125) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 142.5 34.125) (end 159.5 34.125) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 159.5 34.125) (end 159.5 36.25) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 159.5 36.25) (end 176.5 36.25) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 176.5 36.25) (end 176.5 38.375) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 176.5 38.375) (end 193.5 38.375) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 193.5 38.375) (end 193.5 106.375) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 193.5 106.375) (end 195.1372799 115.70819429999999) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 195.1372799 115.70819429999999) (end 209.8597117 124.20819429999999) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 209.8597117 124.20819429999999) (end 201.3597117 138.93062609999998) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 201.3597117 138.93062609999998) (end 186.6372799 130.43062609999998) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 186.6372799 130.43062609999998) (end 171.3055208 125.9554228) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 171.3055208 125.9554228) (end 139.1 125.925) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 139.1 125.925) (end 122.1 125.925) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 122.1 125.925) (end 91.5 108.5) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 
 )
 
