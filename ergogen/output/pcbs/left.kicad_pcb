@@ -115,8 +115,8 @@
 (net 31 "inward_home")
 (net 32 "mid_home")
 (net 33 "outward_home")
-(net 34 "extra_outward_home")
-(net 35 "big_outward_home")
+(net 34 "small_thumbkey_home")
+(net 35 "thumbkey_home")
 
   (footprint "CPG1316S01D02_reversible"
 (at 100 100 0)
@@ -934,7 +934,7 @@
 (attr smd)
 (property "Reference" "S28" hide (at 0 0 -15) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
 (pad "1" thru_hole rect (at -2.5 2.65 -15) (size 1.55 2) (drill 0.5) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (thermal_bridge_angle 45) (net 21 "C4"))
-(pad "2" thru_hole rect (at 2.5 2.65 -15) (size 1.55 2) (drill 0.5) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (thermal_bridge_angle 45) (net 34 "extra_outward_home"))
+(pad "2" thru_hole rect (at 2.5 2.65 -15) (size 1.55 2) (drill 0.5) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (thermal_bridge_angle 45) (net 34 "small_thumbkey_home"))
 (pad "3" smd rect (at -6.35 -6 -15) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (thermal_bridge_angle 45) (net 0 ""))
 (pad "3" smd rect (at -6.35 -6 -15) (size 2 2) (layers "B.Cu" "B.Paste" "B.Mask") (thermal_bridge_angle 45) (net 0 ""))
 (pad "3" smd rect (at -6.35 6 -15) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (thermal_bridge_angle 45) (net 0 ""))
@@ -964,7 +964,7 @@
 (attr smd)
 (property "Reference" "S29" hide (at 0 0 -30) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
 (pad "1" thru_hole rect (at -2.5 2.65 -30) (size 1.55 2) (drill 0.5) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (thermal_bridge_angle 45) (net 26 "C5"))
-(pad "2" thru_hole rect (at 2.5 2.65 -30) (size 1.55 2) (drill 0.5) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (thermal_bridge_angle 45) (net 35 "big_outward_home"))
+(pad "2" thru_hole rect (at 2.5 2.65 -30) (size 1.55 2) (drill 0.5) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (thermal_bridge_angle 45) (net 35 "thumbkey_home"))
 (pad "3" smd rect (at -6.35 -6 -30) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (thermal_bridge_angle 45) (net 0 ""))
 (pad "3" smd rect (at -6.35 -6 -30) (size 2 2) (layers "B.Cu" "B.Paste" "B.Mask") (thermal_bridge_angle 45) (net 0 ""))
 (pad "3" smd rect (at -6.35 6 -30) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask") (thermal_bridge_angle 45) (net 0 ""))

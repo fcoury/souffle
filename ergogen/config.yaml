@@ -104,7 +104,7 @@ points:
         number:
           row_net: R0
 
-    thumbfan:
+    thumb:
       key:
         padding: kp
         spread: ks
@@ -125,12 +125,12 @@ points:
           key:
             column_net: C3
             shift: [-0.2 ks, 0.4 kp] # Shift inward key INWARDS and slightly up, fine-tuned
-        extra_outward: # Extra outward thumb key
+        small_thumbkey: # Extra outward thumb key
           key:
             column_net: C4
             shift: [-0.2 ks, 0 kp] # Shift inward key INWARDS and slightly up, fine-tuned
             splay: -15
-        big_outward: # The space/enter key 1.5u
+        thumbkey: # The space/enter key 1.5u
           key:
             column_net: C5
             shift: [-0.1 ks, -0.2kp]
@@ -142,7 +142,7 @@ points:
           row_net: R4 # New row net for thumb cluster
 
 outlines:
-  _matrix_outline: # Redefined with more points for better contour
+  matrix_outline: # Redefined with more points for better contour
     - what: polygon
       points:
         # Top Row
@@ -174,32 +174,32 @@ outlines:
           shift: [kpx, -kpy]
 
         # --- Thumb Cluster Contour ---
-        # cols: inward, mid, outward, extra_outward, big_outward
+        # cols: inward, mid, outward, small_thumbkey, thumbkey
         # rows: home
-        - ref: thumbfan_big_outward_home
+        - ref: thumb_thumbkey_home
           shift: [-kpx, kpy]
-        - ref: thumbfan_big_outward_home
+        - ref: thumb_thumbkey_home
           shift: [kpx, kpy]
-        - ref: thumbfan_big_outward_home
+        - ref: thumb_thumbkey_home
           shift: [kpx, -kpy]
-        - ref: thumbfan_big_outward_home
+        - ref: thumb_thumbkey_home
           shift: [-kpx, -kpy]
-        - ref: thumbfan_extra_outward_home
+        - ref: thumb_small_thumbkey_home
           shift: [-kpx, -kpy]
-        - ref: thumbfan_inward_home
+        - ref: thumb_inward_home
           shift: [kpx, -kpy]
-        - ref: thumbfan_inward_home
+        - ref: thumb_inward_home
           shift: [-kpx, -kpy]
 
         # Back to the main matrix
         - ref: matrix_outer_bottom
           shift: [-kpx, -kpy]
 
-  _screws:
+  screws:
     - what: circle
       where: /screw_pcb/
       radius: screw_radius
-  _screw_heads:
+  screw_heads:
     - what: circle
       where: /screw_pcb/
       radius: screw_head_radius
@@ -209,7 +209,7 @@ pcbs:
     template: kicad8
     outlines:
       main:
-        outline: _matrix_outline
+        outline: matrix_outline
     footprints:
       m2_screws:
         what: ceoloide/mounting_hole_npth
@@ -226,7 +226,7 @@ pcbs:
 
       key_switches:
         what: *switch_footprint
-        where: /^matrix_.*|^thumbfan_.*/
+        where: /^matrix_.*|^thumb_.*/
         params:
           P1: "{{column_net}}"
           P2: "{{colrow}}"
