@@ -128,6 +128,7 @@ points:
             shift: [0.25 ks, 0 kp]
             stagger: 0.125 kp
             splay: -15
+            rotate: 90
             tags:
               - key_1_5u
       rows:
@@ -170,14 +171,18 @@ outlines:
         # --- Thumb Cluster Contour ---
         # cols: inward, mid, outward, small_thumbkey, thumbkey
         # rows: home
-        - ref: thumb_thumbkey_home
-          shift: [-kpx, kpy]
-        - ref: thumb_thumbkey_home
-          shift: [kpx, kpy]
-        - ref: thumb_thumbkey_home
+        #
+        # here we ignore the thumbkey to be added later
+        # - ref: thumb_thumbkey_home
+        #   shift: [-kpx, kpy]
+        # - ref: thumb_thumbkey_home
+        #   shift: [kpx, kpy]
+        # - ref: thumb_thumbkey_home
+        #   shift: [kpx, -kpy]
+        # - ref: thumb_thumbkey_home
+        #   shift: [-kpx, -kpy]
+        - ref: thumb_small_thumbkey_home
           shift: [kpx, -kpy]
-        - ref: thumb_thumbkey_home
-          shift: [-kpx, -kpy]
         - ref: thumb_small_thumbkey_home
           shift: [-kpx, -kpy]
         - ref: thumb_inward_home
@@ -188,18 +193,32 @@ outlines:
         # Back to the main matrix
         - ref: matrix_outer_bottom
           shift: [-kpx, -kpy]
+  keys:
+    - what: rectangle
+      where: -key_1_5u
+      size: [14, 14]
+      fillet: 0
+
+  keys_1_5u:
+    - what: rectangle
+      where: key_1_5u
+      size: [1.5 keycw, keych]
+      fillet: 0
+
+  thumb_outline:
+    - what: outline
+      name: keys_1_5u
+      expand: 2
+      joints: 0
 
   left_pcb_outline:
     - what: outline
       name: matrix_outline
       expand: 2
       joints: 0
-
-  keys:
-    - what: rectangle
-      where: true
-      size: [14, 14]
-      fillet: 0
+    - what: outline
+      name: thumb_outline
+      operation: add
 
   left_plate_outline:
     - name: left_plate_outline
@@ -221,6 +240,7 @@ pcbs:
     outlines:
       main:
         outline: left_pcb_outline
+
     footprints:
       m2_screws:
         what: ceoloide/mounting_hole_npth
