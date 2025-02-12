@@ -238,6 +238,7 @@ points:
         number:
           row_net: R0
 
+    # Thumb cluster
     thumbfan:
       key:
         padding: kp
@@ -247,7 +248,7 @@ points:
           - key
           - thumb_key
       anchor:
-        ref: matrix_middle_bottom # Anchor to the middle bottom key of the matrix
+        ref: matrix_middle_bottom
         shift: [-1.0 ks, -1.6 kp] # Further adjusted anchor shift to bring MUCH closer and slightly down
       columns:
         inward: # Closest thumb key to the main matrix
@@ -300,7 +301,7 @@ points:
           row_net: R4 # New row net for thumb cluster
 
     # Helper points - likely needs adjustments for Souffle layout
-    underglow_led_1: # Needs repositioning for Souffle
+    underglow_led_1:
       key:
         tags:
           - helper
@@ -311,7 +312,7 @@ points:
         - ref: matrix_inner_top
           shift: [0, vertical_underglow_shift]
 
-    underglow_led_2: # Needs repositioning for Souffle
+    underglow_led_2:
       key:
         tags:
           - helper
@@ -322,7 +323,7 @@ points:
         - ref: matrix_middle_top
           shift: [0, vertical_underglow_shift]
 
-    underglow_led_3: # Needs repositioning for Souffle
+    underglow_led_3:
       key:
         tags:
           - helper
@@ -333,7 +334,7 @@ points:
         - ref: matrix_pinky_top
           shift: [0, vertical_underglow_shift]
 
-    underglow_led_4: # Needs repositioning for Souffle
+    underglow_led_4:
       key:
         tags:
           - helper
@@ -344,7 +345,7 @@ points:
         - ref: matrix_pinky_home
           shift: [0, vertical_underglow_shift]
 
-    underglow_led_5: # Needs repositioning for Souffle
+    underglow_led_5:
       key:
         tags:
           - helper
@@ -355,7 +356,7 @@ points:
         - ref: matrix_middle_bottom
           shift: [0, vertical_underglow_shift]
 
-    underglow_led_6: # Needs repositioning for Souffle
+    underglow_led_6:
       key:
         tags:
           - helper
