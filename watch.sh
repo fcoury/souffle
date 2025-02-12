@@ -7,14 +7,14 @@ cd ergogen
 ergogen .
 killall pcbnew || true
 sleep 1
-open output/pcbs/souffle_wireless.kicad_pcb
+open output/pcbs/left.kicad_pcb
 
 fswatch -o config.yaml | while read f; do
   echo "Generating PCB..."
   ergogen .
   killall pcbnew || true
   sleep 1
-  open output/pcbs/souffle_wireless.kicad_pcb
+  open output/pcbs/left.kicad_pcb
 done
 # watchexec --exts yaml -- 'ergogen . && open output/pcbs/left.kicad_pcb'
 

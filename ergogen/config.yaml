@@ -12,10 +12,12 @@ meta:
 presets:
   pg1316s:
     # Key and keycap measures
-    kx: cx # spacing between key centers (X-axis)
-    ky: cy # spacing between key centers (Y-axis)
-    ks: 19 # horizontal space between columns (default: 19)
-    kp: 17.5 # vertical padding between keys (deafult: 19)
+    kx: 13.5 # spacing between key centers (X-axis)
+    ky: 13 # spacing between key centers (Y-axis)
+    ks: 17 # horizontal space between columns (default: 19)
+    kp: 17 # vertical padding between keys (deafult: 19)
+    kpx: ks * 0.5 # x padding for the outline
+    kpy: kp * 0.5 # y padding for the outline
     kcow: 13.8 # key cutout hole width (cherry, choc v2: 14, choc v1: 13.8)
     kcoh: 13.8 # key cutout hole height (cherry, choc v2: 14, choc v1: 13.8)
     keycw: 17.5 # keycap width (cherry: 18, choc: 17.5)
@@ -143,66 +145,56 @@ outlines:
   _matrix_outline: # Redefined with more points for better contour
     - what: polygon
       points:
-        # Top Row (mostly unchanged)
+        # Top Row
         # cols: outer, pinky, ring, middle, index, inner
         # rows: number, top, home, bottom
-        - ref: matrix_outer_number
-          shift: [-ks * 0.47 + 0.01, kp * 0.475 - 0.015]
-        - ref: matrix_ring_number
-          shift: [-ks * 0.47 + 0.01, kp * 0.225 - 0.014]
-        - ref: matrix_ring_number
-          shift: [-ks * 0.47 + 0.01, kp * 0.475 - 0.015]
-        - ref: matrix_middle_number
-          shift: [-ks * 0.47 + 0.01, kp * 0.35 - 0.015]
-        - ref: matrix_middle_number
-          shift: [-ks * 0.47 + 0.01, kp * 0.468 - 0.005]
-        - ref: matrix_middle_number
-          shift: [ks * 0.478, kp * 0.468 - 0.005]
-        - ref: matrix_middle_number
-          shift: [ks * 0.478, kp * 0.35 - 0.015]
-        - ref: matrix_index_number
-          shift: [ks * 0.478, kp * 0.475 - 0.015]
-        - ref: matrix_index_number
-          shift: [ks * 0.478, kp * 0.34 + 0.052]
-        - ref: matrix_inner_number
-          shift: [ks * 0.478, kp * 0.468 - 0.005]
+        - ref: matrix_outer_number # Before the first key on the first row
+          shift: [-kpx, kpy]
+        - ref: matrix_pinky_number # After the second key on the first row (same y so far)
+          shift: [kpx, kpy]
+        - ref: matrix_ring_number # Goes up to before the third key
+          shift: [-kpx, kpy]
+        - ref: matrix_ring_number # Move horizontally to after the third key
+          shift: [kpx, kpy]
+        - ref: matrix_middle_number # Move down to before the fourth row
+          shift: [-kpx, kpy]
+        - ref: matrix_middle_number # And right to after it
+          shift: [kpx, kpy]
+        - ref: matrix_index_number # Now down to the before 5th key
+          shift: [-kpx, kpy]
+        - ref: matrix_index_number # And right to after it
+          shift: [kpx, kpy]
+        - ref: matrix_inner_number # Down againt to before the 6th key
+          shift: [-kpx, kpy]
+        - ref: matrix_inner_number # And also right to after it
+          shift: [kpx, kpy]
 
-        # - ref: mcu_cover_top_right
-        #   # shift: [1, -2]
-        # - ref: mcu_cover_bottom_right
-        #   shift: [0, -30]
-        # --- Thumb Cluster Contour --- (New points to follow thumb keys)
+        # Line from top right down to before the thumb cluster
+        - ref: matrix_inner_bottom
+          shift: [kpx, -kpy]
+
+        # --- Thumb Cluster Contour ---
         # cols: inward, mid, outward, extra_outward, big_outward
         # rows: home
-        - ref: thumbfan_big_outward_home # Start of thumb cluster contour
-          shift: [0.55 kp, -0.6 kp]
+        - ref: thumbfan_big_outward_home
+          shift: [-kpx, kpy]
+        - ref: thumbfan_big_outward_home
+          shift: [kpx, kpy]
+        - ref: thumbfan_big_outward_home
+          shift: [kpx, -kpy]
+        - ref: thumbfan_big_outward_home
+          shift: [-kpx, -kpy]
         - ref: thumbfan_extra_outward_home
-          shift: [-0.6 kp, -0.5 kp]
-        - ref: thumbfan_outward_home
-          shift: [-0.5 kp, -0.6 kp]
-        - ref: thumbfan_mid_home
-          shift: [-0.4 kp, -0.8 kp]
+          shift: [-kpx, -kpy]
         - ref: thumbfan_inward_home
-          shift: [-0.5 kp, -0.6 kp]
+          shift: [kpx, -kpy]
+        - ref: thumbfan_inward_home
+          shift: [-kpx, -kpy]
 
-        # --- Bottom Row Contour --- (New points to follow bottom row keys)
-        # cols: outer, pinky, ring, middle, index, inner
-        # rows: number, top, home, bottom
-        - ref: matrix_outer_bottom # Start of bottom row contour
-          shift: [-0.5 kp, -0.7 kp]
-        # - ref: matrix_outer_bottom
-        #   shift: [ks * 0.478 + 0.1 kp, -kp * 0.485 - 0.1 kp] # Adjusted: slightly outwards and down
-        # - ref: matrix_middle_bottom
-        #   shift: [0, -kp * 0.6 kp] # Adjusted: Directly below middle_bottom, further down
-        # - ref: matrix_ring_bottom
-        #   shift: [-ks * 0.47 + 0.012 - 0.1 kp, -kp * 0.485 - 0.6 kp] # Adjusted: Slightly inwards and significantly down
-        # - ref: matrix_outer_bottom # End of bottom row contour
-        #   shift: [-ks * 0.47 + 0.012 - 0.3 kp, -kp * 0.485 - 0.5 kp] # Adjusted: Further inwards and significantly down
+        # Back to the main matrix
+        - ref: matrix_outer_bottom
+          shift: [-kpx, -kpy]
 
-        # - ref: plate_outline_bottom_1 # Re-add the remaining points, may need further adjust
-        # - ref: plate_outline_bottom_2
-        # - ref: plate_outline_bottom_3
-        # - ref: plate_outline_bottom_4
   _screws:
     - what: circle
       where: /screw_pcb/
