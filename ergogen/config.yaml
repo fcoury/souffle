@@ -144,6 +144,7 @@ points:
 outlines:
   matrix_outline: # Redefined with more points for better contour
     - what: polygon
+      operation: stack
       points:
         # Top Row
         # cols: outer, pinky, ring, middle, index, inner
@@ -195,6 +196,23 @@ outlines:
         - ref: matrix_outer_bottom
           shift: [-kpx, -kpy]
 
+  left_pcb_outline:
+    - what: outline
+      name: matrix_outline
+      expand: 2
+      joints: 0
+
+  keys:
+    - what: rectangle
+      where: true
+      size: [14, 14]
+      fillet: 0
+
+  left_plate_outline:
+    - name: left_plate_outline
+    - name: keys
+      operation: subtract
+
   screws:
     - what: circle
       where: /screw_pcb/
@@ -209,7 +227,7 @@ pcbs:
     template: kicad8
     outlines:
       main:
-        outline: matrix_outline
+        outline: left_pcb_outline
     footprints:
       m2_screws:
         what: ceoloide/mounting_hole_npth
