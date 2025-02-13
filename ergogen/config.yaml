@@ -67,7 +67,6 @@ points:
         spread: ks
         tags:
           - key
-          - matrix_key
       anchor:
         rotate: hand_rotation
         shift: [100, -100] # Fix KiCad placement
@@ -135,7 +134,7 @@ points:
         home:
           row_net: R4 # New row net for thumb cluster
 
-  mirror: &mirror
+  mirror:
     ref: matrix_inner_number
     distance: 80
 
@@ -280,7 +279,7 @@ outlines:
 
   left_keys_1_5u:
     - what: rectangle
-      where: mirror_thumb_thumbkey_home
+      where: thumb_thumbkey_home
       size: [1.5 keycw, keych]
       fillet: 0
 
@@ -367,19 +366,16 @@ pcbs:
 
       key_switches:
         what: *switch_footprint
-        where: /^matrix_.*|^thumb_.*/
+        where: /^matrix_|^thumb_/
         params:
           from: "{{column_net}}"
           to: "{{colrow}}"
-          # P1: "{{column_net}}"
-          # P2: "{{colrow}}"
-          # P3: ""
         adjust:
           rotate: switch_rotation
 
       diodes:
         what: diode_tht_sod123
-        where: /^matrix_.*|^thumb_.*/
+        where: /^matrix_|^thumb_/
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
@@ -473,7 +469,7 @@ pcbs:
 
       key_switches:
         what: *switch_footprint
-        where: /^mirror_matrix_.*|^mirror_thumb_.*/
+        where: /^mirror_matrix_|^mirror_thumb_/
         params:
           from: "{{column_net}}"
           to: "{{colrow}}"
@@ -485,7 +481,7 @@ pcbs:
 
       diodes:
         what: diode_tht_sod123
-        where: /^mirror_matrix_.*|^mirror_thumb_.*/
+        where: /^mirror_matrix_|^mirror_thumb_/
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
