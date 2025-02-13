@@ -135,6 +135,34 @@ points:
         home:
           row_net: R4 # New row net for thumb cluster
 
+    mcu_cover_top_left:
+      key.tags:
+        - helper
+      anchor:
+        - ref: matrix_inner_top
+          shift: [ks * 0.53 + 0.043, kp * 0.35 - 0.015]
+    mcu_cover_top_right:
+      key.tags:
+        - helper
+      anchor:
+        - ref: mcu_cover_top_left
+          shift: [ks + 0.72, 0]
+    mcu_cover_bottom_right:
+      key.tags:
+        - helper
+      anchor:
+        - ref: mcu_cover_top_right
+          shift: [0, -kp * 3.2 + 0.339]
+    # mcu_cover_bottom_left:
+    #   key.tags:
+    #     - helper
+    #   anchor:
+    #     - aggregate:
+    #         method: intersect
+    #         parts:
+    #           - ref: mcu_cover_top_left
+    #           - ref: mcu_cover_bottom_right
+
 outlines:
   matrix_outline: # Redefined with more points for better contour
     - what: polygon
@@ -193,6 +221,13 @@ outlines:
         # Back to the main matrix
         - ref: matrix_outer_bottom
           shift: [-kpx, -kpy]
+
+  mcu_cover_outline:
+    - what: rectangle
+      where: /mcu_cover_top_left/
+      size: [ks * 2.5, kp * 2]
+      fillet: 0
+
   keys:
     - what: rectangle
       where: -key_1_5u
@@ -214,7 +249,11 @@ outlines:
   left_pcb_outline:
     - what: outline
       name: matrix_outline
-      expand: 2
+      expand: 1
+      joints: 0
+    - what: outline
+      name: mcu_cover_outline
+      expand: 1
       joints: 0
     - what: outline
       name: thumb_outline
@@ -259,8 +298,50 @@ pcbs:
         what: *switch_footprint
         where: /^matrix_.*|^thumb_.*/
         params:
-          P1: "{{column_net}}"
-          P2: "{{colrow}}"
-          P3: ""
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+          # P1: "{{column_net}}"
+          # P2: "{{colrow}}"
+          # P3: ""
         adjust:
           rotate: switch_rotation
+
+      diodes:
+        what: diode_tht_sod123
+        where: /^matrix_.*|^thumb_.*/
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+          include_tht: false
+          reversible: false
+        adjust:
+          shift: [-1 * horizontal_diode_shift, vertical_diode_shift]
+          rotate: 90 + diode_rotation
+
+      mcu:
+        what: mcu_nice_nano
+        where: matrix_inner_number
+        adjust:
+          shift: [21, -9]
+        params:
+          P0: DAT
+          P1: LED
+          P2: SDA
+          P3: SCL
+          P4: CS
+          P5: R0
+          P6: R1
+          P7: R2
+          P8: R3
+          P21: C0
+          P20: C1
+          P19: C2
+          P18: C3
+          P15: C4
+          P14: C5
+          reversible: false
+          include_traces: true
+          show_silk_labels: true
+          show_via_labels: true
+          show_instructions: false
+          use_rectangular_jumpers: true
