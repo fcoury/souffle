@@ -135,34 +135,6 @@ points:
         home:
           row_net: R4 # New row net for thumb cluster
 
-    mcu_cover_top_left:
-      key.tags:
-        - helper
-      anchor:
-        - ref: matrix_inner_top
-          shift: [ks * 0.53 + 0.043, kp * 0.35 - 0.015]
-    mcu_cover_top_right:
-      key.tags:
-        - helper
-      anchor:
-        - ref: mcu_cover_top_left
-          shift: [ks + 0.72, 0]
-    mcu_cover_bottom_right:
-      key.tags:
-        - helper
-      anchor:
-        - ref: mcu_cover_top_right
-          shift: [0, -kp * 3.2 + 0.339]
-    # mcu_cover_bottom_left:
-    #   key.tags:
-    #     - helper
-    #   anchor:
-    #     - aggregate:
-    #         method: intersect
-    #         parts:
-    #           - ref: mcu_cover_top_left
-    #           - ref: mcu_cover_bottom_right
-
 outlines:
   matrix_outline: # Redefined with more points for better contour
     - what: polygon
@@ -224,8 +196,10 @@ outlines:
 
   mcu_cover_outline:
     - what: rectangle
-      where: /mcu_cover_top_left/
-      size: [ks * 2.5, kp * 2]
+      where: matrix_inner_top
+      adjust:
+        shift: [ks, -0.5 kp - 4.8]
+      size: [1.6 ks, 4 kp + 6]
       fillet: 0
 
   keys:
@@ -255,6 +229,7 @@ outlines:
       name: mcu_cover_outline
       expand: 1
       joints: 0
+      operation: add
     - what: outline
       name: thumb_outline
       operation: add
@@ -317,6 +292,40 @@ pcbs:
         adjust:
           shift: [-1 * horizontal_diode_shift, vertical_diode_shift]
           rotate: 90 + diode_rotation
+
+      # Battery jack
+      jstph:
+        what: jstph
+        where:
+          ref: matrix_inner_home
+          shift: [16, 5.5]
+        params:
+          side: F
+          pos: pos
+          neg: GND
+
+      # Battery on/off switch
+      battery_switch:
+        what: slider
+        where:
+          ref: matrix_inner_home
+          shift: [29.6, -8]
+          rotate: -90
+        params:
+          side: F
+          from: pos
+          to: RAW
+
+      reset_switch:
+        what: EVQPUC
+        where: matrix_inner_home
+        params:
+          side: F
+          from: GND
+          to: RST
+        adjust:
+          shift: [29.6, 2]
+          rotate: -90
 
       mcu:
         what: mcu_nice_nano
