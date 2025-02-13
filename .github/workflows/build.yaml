@@ -42,28 +42,28 @@ jobs:
         uses: ./.github/actions/kibot
         with:
           # boards: souffle souffle_wireless
-          boards: souffle_wireless
+          boards: left
           config: default
       - name: Export DSN file for Freerouting
         uses: ./.github/actions/export-dsn
         with:
           # boards: souffle souffle_wireless
-          boards: souffle_wireless
+          boards: left
       - name: Autoroute PCB
         uses: ./.github/actions/autoroute
         with:
           # boards: souffle souffle_wireless
-          boards: souffle_wireless
+          boards: left
       - name: Import SES
         uses: ./.github/actions/import-ses
         with:
           # boards: souffle souffle_wireless
-          boards: souffle_wireless
+          boards: left
       - name: Run KiBot to generate images, gerbers for the autorouted board
         uses: ./.github/actions/kibot
         with:
           # boards: souffle_autorouted souffle_wireless_autorouted
-          boards: souffle_wireless_autorouted
+          boards: left_autorouted
           config: boards
       - name: Persist output
         uses: actions/upload-artifact@v4
