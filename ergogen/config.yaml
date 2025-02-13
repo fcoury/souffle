@@ -135,8 +135,12 @@ points:
         home:
           row_net: R4 # New row net for thumb cluster
 
+  mirror: &mirror
+    ref: matrix_inner_number
+    distance: 80
+
 outlines:
-  matrix_outline: # Redefined with more points for better contour
+  left_matrix_outline:
     - what: polygon
       operation: stack
       points:
@@ -194,9 +198,75 @@ outlines:
         - ref: matrix_outer_bottom
           shift: [-kpx, -kpy]
 
-  mcu_cover_outline:
+  right_matrix_outline:
+    - what: polygon
+      operation: stack
+      points:
+        # Top Row
+        # cols: outer, pinky, ring, middle, index, inner
+        # rows: number, top, home, bottom
+        - ref: mirror_matrix_outer_number # Before the first key on the first row
+          shift: [-kpx, kpy]
+        - ref: mirror_matrix_pinky_number # After the second key on the first row (same y so far)
+          shift: [kpx, kpy]
+        - ref: mirror_matrix_ring_number # Goes up to before the third key
+          shift: [-kpx, kpy]
+        - ref: mirror_matrix_ring_number # Move horizontally to after the third key
+          shift: [kpx, kpy]
+        - ref: mirror_matrix_middle_number # Move down to before the fourth row
+          shift: [-kpx, kpy]
+        - ref: mirror_matrix_middle_number # And right to after it
+          shift: [kpx, kpy]
+        - ref: mirror_matrix_index_number # Now down to the before 5th key
+          shift: [-kpx, kpy]
+        - ref: mirror_matrix_index_number # And right to after it
+          shift: [kpx, kpy]
+        - ref: mirror_matrix_inner_number # Down againt to before the 6th key
+          shift: [-kpx, kpy]
+        - ref: mirror_matrix_inner_number # And also right to after it
+          shift: [kpx, kpy]
+
+        # Line from top right down to before the thumb cluster
+        - ref: mirror_matrix_inner_bottom
+          shift: [kpx, -kpy]
+
+        # --- Thumb Cluster Contour ---
+        # cols: inward, mid, outward, small_thumbkey, thumbkey
+        # rows: home
+        #
+        # here we ignore the thumbkey to be added later
+        # - ref: thumb_thumbkey_home
+        #   shift: [-kpx, kpy]
+        # - ref: thumb_thumbkey_home
+        #   shift: [kpx, kpy]
+        # - ref: thumb_thumbkey_home
+        #   shift: [kpx, -kpy]
+        # - ref: thumb_thumbkey_home
+        #   shift: [-kpx, -kpy]
+        - ref: mirror_thumb_small_thumbkey_home
+          shift: [kpx, -kpy]
+        - ref: mirror_thumb_small_thumbkey_home
+          shift: [-kpx, -kpy]
+        - ref: mirror_thumb_inward_home
+          shift: [kpx, -kpy]
+        - ref: mirror_thumb_inward_home
+          shift: [-kpx, -kpy]
+
+        # Back to the main matrix
+        - ref: mirror_matrix_outer_bottom
+          shift: [-kpx, -kpy]
+
+  left_mcu_cover_outline:
     - what: rectangle
       where: matrix_inner_top
+      adjust:
+        shift: [ks, -0.5 kp - 4.8]
+      size: [1.6 ks, 4 kp + 6]
+      fillet: 0
+
+  right_mcu_cover_outline:
+    - what: rectangle
+      where: mirror_matrix_inner_top
       adjust:
         shift: [ks, -0.5 kp - 4.8]
       size: [1.6 ks, 4 kp + 6]
@@ -208,30 +278,56 @@ outlines:
       size: [14, 14]
       fillet: 0
 
-  keys_1_5u:
+  left_keys_1_5u:
     - what: rectangle
-      where: key_1_5u
+      where: mirror_thumb_thumbkey_home
       size: [1.5 keycw, keych]
       fillet: 0
 
-  thumb_outline:
+  right_keys_1_5u:
+    - what: rectangle
+      where: mirror_thumb_thumbkey_home
+      size: [1.5 keycw, keych]
+      fillet: 0
+
+  left_thumb_outline:
     - what: outline
-      name: keys_1_5u
+      name: left_keys_1_5u
+      expand: 2
+      joints: 0
+
+  right_thumb_outline:
+    - what: outline
+      name: right_keys_1_5u
       expand: 2
       joints: 0
 
   left_pcb_outline:
     - what: outline
-      name: matrix_outline
+      name: left_matrix_outline
       expand: 1
       joints: 0
     - what: outline
-      name: mcu_cover_outline
+      name: left_mcu_cover_outline
       expand: 1
       joints: 0
       operation: add
     - what: outline
-      name: thumb_outline
+      name: left_thumb_outline
+      operation: add
+
+  right_pcb_outline:
+    - what: outline
+      name: right_matrix_outline
+      expand: 1
+      joints: 0
+    - what: outline
+      name: right_mcu_cover_outline
+      expand: 1
+      joints: 0
+      operation: add
+    - what: outline
+      name: right_thumb_outline
       operation: add
 
   left_plate_outline:
@@ -249,7 +345,7 @@ outlines:
       radius: screw_head_radius
 
 pcbs:
-  left:
+  souffle_left:
     template: kicad8
     outlines:
       main:
@@ -330,6 +426,112 @@ pcbs:
       mcu:
         what: mcu_nice_nano
         where: matrix_inner_number
+        adjust:
+          shift: [21, -9]
+        params:
+          P0: DAT
+          P1: LED
+          P2: SDA
+          P3: SCL
+          P4: CS
+          P5: R0
+          P6: R1
+          P7: R2
+          P8: R3
+          P21: C0
+          P20: C1
+          P19: C2
+          P18: C3
+          P15: C4
+          P14: C5
+          reversible: false
+          include_traces: true
+          show_silk_labels: true
+          show_via_labels: true
+          show_instructions: false
+          use_rectangular_jumpers: true
+
+  souffle_right:
+    template: kicad8
+    outlines:
+      main:
+        outline: right_pcb_outline
+
+    footprints:
+      m2_screws:
+        what: ceoloide/mounting_hole_npth
+        where: /screw_mcu/
+        params:
+          hole_size: screw_diameter
+          hole_drill: screw_diameter
+      m2_spacers:
+        what: ceoloide/mounting_hole_npth
+        where: /screw_pcb/
+        params:
+          hole_size: spacer_diameter
+          hole_drill: spacer_diameter
+
+      key_switches:
+        what: *switch_footprint
+        where: /^mirror_matrix_.*|^mirror_thumb_.*/
+        params:
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+          # P1: "{{column_net}}"
+          # P2: "{{colrow}}"
+          # P3: ""
+        adjust:
+          rotate: switch_rotation
+
+      diodes:
+        what: diode_tht_sod123
+        where: /^mirror_matrix_.*|^mirror_thumb_.*/
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+          include_tht: false
+          reversible: false
+        adjust:
+          shift: [-1 * horizontal_diode_shift, vertical_diode_shift]
+          rotate: 90 + diode_rotation
+
+      # Battery jack
+      jstph:
+        what: jstph
+        where:
+          ref: mirror_matrix_inner_home
+          shift: [16, 5.5]
+        params:
+          side: F
+          pos: pos
+          neg: GND
+
+      # Battery on/off switch
+      battery_switch:
+        what: slider
+        where:
+          ref: mirror_matrix_inner_home
+          shift: [29.6, -8]
+          rotate: -90
+        params:
+          side: F
+          from: pos
+          to: RAW
+
+      reset_switch:
+        what: EVQPUC
+        where: mirror_matrix_inner_home
+        params:
+          side: F
+          from: GND
+          to: RST
+        adjust:
+          shift: [29.6, 2]
+          rotate: -90
+
+      mcu:
+        what: mcu_nice_nano
+        where: mirror_matrix_inner_number
         adjust:
           shift: [21, -9]
         params:
