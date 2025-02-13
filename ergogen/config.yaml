@@ -5,9 +5,11 @@ meta:
   ref: &kb_ref "Souffle"
   author: "Felipe Coury"
   url: &kb_url https://github.com/fcoury/souffle # Replace with your repo if you create one
-  footprint: &switch_footprint "pg1316s"
+  # footprint: &switch_footprint "pg1316s"
+  footprint: &switch_footprint "switch_choc_v1_v2"
   switch:
-    $extends: presets.pg1316s
+    # $extends: presets.pg1316s
+    $extends: presets.choc_v1
 
 presets:
   pg1316s:
@@ -30,6 +32,35 @@ presets:
     horizontal_diode_shift: -0.5 kcow - 0.85
     diode_rotation: 0 # Diode rotation
     switch_rotation: 0
+  choc_v1:
+    # Key and keycap measures
+    kx: cx # spacing between key centers (X-axis)
+    ky: cy # spacing between key centers (Y-axis)
+    ks: 18.5 # horizontal space between columns (default: 19)
+    kp: 17.5 # vertical padding between keys (deafult: 19)
+    kpx: ks * 0.5 # x padding for the outline
+    kpy: kp * 0.5 # y padding for the outline
+    kcow: 13.8 # key cutout hole width (cherry, choc v2: 14, choc v1: 13.8)
+    kcoh: 13.8 # key cutout hole height (cherry, choc v2: 14, choc v1: 13.8)
+    keycw: 17.5 # keycap width (cherry: 18, choc: 17.5)
+    keych: 16.5 # keycap height (cherry: 18, choc: 16.5)
+    led_pos_x: 0 # Led X position relative to the switch center
+    led_pos_y: 4.7 # Led Y position relative to the switch center
+    led_rotation: 0 # Led rotation
+    vertical_underglow_shift: -kp + 7.8 # How much to shift underglow leds tied to keys
+    vertical_diode_shift: 1.5 # How much to shift to avoid overlap
+    horizontal_diode_shift: -0.5 kcow - 0.85
+    diode_rotation: -180 # Diode rotation
+    switch_rotation: 180 # Hotswap south, led north
+  choc_v2:
+    # Key and keycap measures
+    $extends: presets.choc_v1
+    kx: u # spacing between key centers (X-axis)
+    ky: u # spacing between key centers (Y-axis)
+    ks: 19 # horizontal space between columns (default: 19)
+    kp: 19 # vertical padding between keys (deafult: 19)
+    keycw: 18 # keycap width (cherry: 18, choc: 17.5)
+    keych: 18 # keycap height (cherry: 18, choc: 16.5)
 
 units:
   # The following statements will make the content of the preset
