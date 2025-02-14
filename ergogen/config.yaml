@@ -348,11 +348,6 @@ outlines:
       expand: 1
       joints: 0
     - what: outline
-      name: left_mcu_cover_outline
-      expand: 1
-      joints: 0
-      operation: add
-    - what: outline
       name: left_thumb_outline
       operation: add
 
@@ -433,12 +428,14 @@ pcbs:
       jstph:
         what: jstph
         where:
-          ref: matrix_inner_home
-          shift: [16, 5.5]
+          ref: matrix_outer_home
+          shift: [8, 5]
         params:
           side: F
           pos: pos
           neg: GND
+        adjust:
+          rotate: 90
 
       reset_switch:
         what: EVQPUC
