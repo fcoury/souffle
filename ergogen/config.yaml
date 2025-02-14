@@ -48,7 +48,7 @@ presets:
     led_pos_y: 4.7 # Led Y position relative to the switch center
     led_rotation: 0 # Led rotation
     vertical_underglow_shift: -kp + 7.8 # How much to shift underglow leds tied to keys
-    vertical_diode_shift: 1.5 # How much to shift to avoid overlap
+    vertical_diode_shift: -3.0 # How much to shift to avoid overlap
     horizontal_diode_shift: -0.5 kcow - 0.85
     diode_rotation: -180 # Diode rotation
     switch_rotation: 180 # Hotswap south, led north
@@ -440,34 +440,35 @@ pcbs:
           pos: pos
           neg: GND
 
+      reset_switch:
+        what: EVQPUC
+        where: matrix_outer_home
+        params:
+          side: B
+          from: GND
+          to: RST
+        adjust:
+          shift: [-9.1, 3]
+          rotate: 90
+
       # Battery on/off switch
       battery_switch:
         what: slider
         where:
-          ref: matrix_inner_home
-          shift: [29.6, -6]
-          rotate: -90
+          ref: matrix_outer_home
+          shift: [-9.1, -11]
+          rotate: 90
         params:
-          side: F
+          side: B
           from: pos
           to: RAW
 
-      reset_switch:
-        what: EVQPUC
-        where: matrix_inner_home
-        params:
-          side: F
-          from: GND
-          to: RST
-        adjust:
-          shift: [29.6, 4]
-          rotate: -90
-
       mcu:
         what: mcu_nice_nano
-        where: matrix_inner_number
+        where: matrix_outer_number
         adjust:
-          shift: [21, -9]
+          rotate: 90
+          shift: [5.3, -3]
         params:
           P0: DAT
           P1: LED
