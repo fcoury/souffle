@@ -152,12 +152,14 @@ points:
         small_thumbkey: # Extra outward thumb key
           key:
             column_net: C4
+            shift: [0.2 ks, -0.2 kp]
+            splay: -15
         thumbkey: # The space/enter key 1.5u
           key:
             column_net: C5
-            shift: [0.25 ks, 0 kp]
-            stagger: 0.125 kp
-            splay: -15
+            shift: [0.3 ks, -0.5 kp]
+            # stagger: 0.125 kp
+            # splay: -15
             rotate: 90
             tags:
               - key_1_5u
@@ -313,11 +315,19 @@ outlines:
       where: thumb_thumbkey_home
       size: [1.5 keycw, keych]
       fillet: 0
+    - what: rectangle
+      where: thumb_small_thumbkey_home
+      size: [keycw, keych]
+      fillet: 0
 
   right_keys_1_5u:
     - what: rectangle
       where: mirror_thumb_thumbkey_home
       size: [1.5 keycw, keych]
+      fillet: 0
+    - what: rectangle
+      where: mirror_thumb_small_thumbkey_home
+      size: [keycw, keych]
       fillet: 0
 
   left_thumb_outline:
@@ -401,6 +411,9 @@ pcbs:
         params:
           from: "{{column_net}}"
           to: "{{colrow}}"
+          include_keycap: true
+          include_corner_marks: true
+          include_stabilizer_pad: false
         adjust:
           rotate: switch_rotation
 
