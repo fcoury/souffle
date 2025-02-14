@@ -152,12 +152,12 @@ points:
         small_thumbkey: # Extra outward thumb key
           key:
             column_net: C4
-            shift: [0.2 ks, -0.2 kp]
+            shift: [3, -0.2 kp]
             splay: -15
         thumbkey: # The space/enter key 1.5u
           key:
             column_net: C5
-            shift: [0.3 ks, -0.5 kp]
+            shift: [4, -0.5 kp]
             # stagger: 0.125 kp
             # splay: -15
             rotate: 90
@@ -292,16 +292,16 @@ outlines:
     - what: rectangle
       where: matrix_inner_top
       adjust:
-        shift: [ks, -0.5 kp - 4.8]
-      size: [1.6 ks, 4 kp + 6]
+        shift: [ks, -0.25 kp + 2.6]
+      size: [1.6 ks, 3 kp]
       fillet: 0
 
   right_mcu_cover_outline:
     - what: rectangle
       where: mirror_matrix_inner_top
       adjust:
-        shift: [ks, -0.5 kp - 4.8]
-      size: [1.6 ks, 4 kp + 6]
+        shift: [ks, -0.25 kp + 2.6]
+      size: [1.6 ks, 3 kp]
       fillet: 0
 
   keys:
@@ -445,7 +445,7 @@ pcbs:
         what: slider
         where:
           ref: matrix_inner_home
-          shift: [29.6, -8]
+          shift: [29.6, -6]
           rotate: -90
         params:
           side: F
@@ -460,7 +460,7 @@ pcbs:
           from: GND
           to: RST
         adjust:
-          shift: [29.6, 2]
+          shift: [29.6, 4]
           rotate: -90
 
       mcu:
@@ -484,6 +484,7 @@ pcbs:
           P18: C3
           P15: C4
           P14: C5
+          side: B
           reversible: false
           include_traces: true
           show_silk_labels: true
@@ -517,6 +518,9 @@ pcbs:
         params:
           from: "{{column_net}}"
           to: "{{colrow}}"
+          include_keycap: true
+          include_corner_marks: true
+          include_stabilizer_pad: false
           # P1: "{{column_net}}"
           # P2: "{{colrow}}"
           # P3: ""

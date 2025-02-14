@@ -11,7 +11,7 @@
   (paper "A3")
   (title_block
     (title "souffle_right")
-    (date "2025-02-13")
+    (date "2025-02-14")
     (rev "0.1")
     (company "Felipe Coury")
   )
@@ -186,7 +186,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -248,7 +258,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -310,7 +330,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -372,7 +402,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -434,7 +474,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -496,7 +546,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -558,7 +618,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -620,7 +690,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -682,7 +762,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -744,7 +834,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -806,7 +906,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -868,7 +978,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -930,7 +1050,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -992,7 +1122,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -1054,7 +1194,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -1116,7 +1266,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -1178,7 +1338,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -1240,7 +1410,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -1302,7 +1482,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -1364,7 +1554,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -1426,7 +1626,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -1488,7 +1698,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -1550,7 +1770,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -1612,7 +1842,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -1674,7 +1914,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -1736,7 +1986,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -1779,9 +2039,9 @@
 
   (footprint "ceoloide:switch_choc_v1_v2"
     (layer "B.Cu")
-    (at 272.5 116.1875 -180)
+    (at 270.5080892 120.3446975 -165)
     (property "Reference" "S27"
-      (at 0 8.8 -180)
+      (at 0 8.8 -165)
       (layer "B.SilkS")
       hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1790,19 +2050,29 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 -180) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 -165) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
     
     
     
-    (pad "" np_thru_hole circle (at 5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
-    (pad "" np_thru_hole circle (at -5.5 0 -180) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
-    
-    
-    (pad "" thru_hole circle (at -5.00 5.15 -180) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    (pad "" np_thru_hole circle (at 5.5 0 -165) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at -5.5 0 -165) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
     
-    (pad "" np_thru_hole circle (at 0 -5.95 -180) (size 3 3) (drill 3) (layers "*.Cu" "*.Mask"))
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
+    
+    
+    
+    (pad "" np_thru_hole circle (at 0 -5.95 -165) (size 3 3) (drill 3) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -1826,14 +2096,14 @@
     
     
     
-    (pad "1" smd rect (at -3.275 -5.95 -180) (size 2.6 2.6) (layers "B.Cu" "B.Paste" "B.Mask") (net 24 "C4"))
+    (pad "1" smd rect (at -3.275 -5.95 -165) (size 2.6 2.6) (layers "B.Cu" "B.Paste" "B.Mask") (net 24 "C4"))
     
 
     
-    (pad "2" smd rect (at 8.275 -3.75 -180) (size 2.6 2.6) (layers "B.Cu" "B.Paste" "B.Mask") (net 36 "mirror_small_thumbkey_home"))
+    (pad "2" smd rect (at 8.275 -3.75 -165) (size 2.6 2.6) (layers "B.Cu" "B.Paste" "B.Mask") (net 36 "mirror_small_thumbkey_home"))
 
     
-    (pad "" np_thru_hole circle (at 5 -3.75 15) (size 3 3) (drill 3) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 5 -3.75 30) (size 3 3) (drill 3) (layers "*.Cu" "*.Mask"))
     
     
   )
@@ -1841,7 +2111,7 @@
 
   (footprint "ceoloide:switch_choc_v1_v2"
     (layer "B.Cu")
-    (at 249.53259309999999 115.1970381 -255)
+    (at 253.0313355 130.4627795 -255)
     (property "Reference" "S28"
       (at 0 8.8 -255)
       (layer "B.SilkS")
@@ -1860,7 +2130,17 @@
     (pad "" np_thru_hole circle (at -5.5 0 -255) (size 1.9 1.9) (drill 1.9) (layers "*.Cu" "*.Mask"))
     
     
-    (pad "" thru_hole circle (at -5.00 5.15 -255) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
+    
+    (fp_line (start -7 -6) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -6 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -6 -7) (end -7 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start -7 7) (end -7 6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 6) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 6 -7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 6 7) (end 7 7) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    (fp_line (start 7 -7) (end 7 -6) (layer "Dwgs.User") (stroke (width 0.15) (type solid)))
+    
+    (fp_rect (start 9 9) (end -9 -9) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
     
     
     
@@ -2501,9 +2781,9 @@
 
     (footprint "ceoloide:diode_tht_sod123"
         (layer "B.Cu")
-        (at 264.75 114.6875 90)
+        (at 262.63393549999995 120.9016564 105)
         (property "Reference" "D27"
-            (at 0 0 90)
+            (at 0 0 105)
             (layer "B.SilkS")
             hide
             (effects (font (size 1 1) (thickness 0.15)))
@@ -2516,15 +2796,15 @@
         (fp_line (start -0.35 0) (end -0.35 0.55) (layer "B.SilkS") (stroke (width 0.1) (type solid)))
         (fp_line (start -0.35 0) (end -0.35 -0.55) (layer "B.SilkS") (stroke (width 0.1) (type solid)))
         (fp_line (start -0.75 0) (end -0.35 0) (layer "B.SilkS") (stroke (width 0.1) (type solid)))
-        (pad "2" smd rect (at 1.65 0 90) (size 0.9 1.2) (layers "B.Cu" "B.Paste" "B.Mask") (net 36 "mirror_small_thumbkey_home"))
-        (pad "1" smd rect (at -1.65 0 90) (size 0.9 1.2) (layers "B.Cu" "B.Paste" "B.Mask") (net 42 "R4"))
+        (pad "2" smd rect (at 1.65 0 105) (size 0.9 1.2) (layers "B.Cu" "B.Paste" "B.Mask") (net 36 "mirror_small_thumbkey_home"))
+        (pad "1" smd rect (at -1.65 0 105) (size 0.9 1.2) (layers "B.Cu" "B.Paste" "B.Mask") (net 42 "R4"))
         
         )
         
 
     (footprint "ceoloide:diode_tht_sod123"
         (layer "B.Cu")
-        (at 248.97563419999997 107.3228844 15)
+        (at 252.4743766 122.58862580000002 15)
         (property "Reference" "D28"
             (at 0 0 15)
             (layer "B.SilkS")
@@ -2861,27 +3141,31 @@
 (gr_line (start 279.75 34.375) (end 279.75 34.5625) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_line (start 279.75 34.5625) (end 263.25 34.5625) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_arc (start 263.25 34.5625) (mid 261.8357864 35.1482864) (end 261.25 36.5625) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 261.25 37.3625) (end 261.25 36.5625) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 261.25 37.3625) (end 239.2 37.3625) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_arc (start 239.2 37.3625) (mid 238.4928932 37.6553932) (end 238.2 38.3625) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 238.2 38.3625) (end 238.2 102.5750450453244) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 238.2 112.506183880565) (end 238.2 114.3625) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_arc (start 238.2 114.3625) (mid 238.41175479999998 114.97786119999999) (end 238.9573389 115.3326111) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 260.1885093697462 115.3625) (end 261.25 115.3625) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 261.25 119.3240369773929) (end 261.25 115.3625) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_arc (start 262.5802299 126.822018) (mid 262.9101735 126.9084181) (end 263.25 126.9375) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 263.25 126.9375) (end 318.75 126.9375) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 261.25 36.5625) (end 261.25 37.337500000000006) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 261.25 37.337500000000006) (end 239.2 37.337500000000006) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_arc (start 239.2 37.337500000000006) (mid 238.4928932 37.63039320000001) (end 238.2 38.337500000000006) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 238.2 38.337500000000006) (end 238.2 90.8375) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_arc (start 238.2 90.8375) (mid 238.4928932 91.54460680000001) (end 239.2 91.8375) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 239.2 91.8375) (end 261.25 91.8375) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 261.25 91.8375) (end 261.25 106.5625) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_arc (start 261.25 106.5625) (mid 261.2501424 106.5863677) (end 261.2505697 106.610232) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 261.25056959999995 106.610232) (end 261.38348884193834 112.17804592075663) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 264.35558000000003 133.12247620000002) (end 282.047990387819 128.38180913282918) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 282.047990387819 128.38180913282918) (end 300.3288831956294 126.9375) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 300.3288831956294 126.9375) (end 318.75 126.9375) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_arc (start 318.75 126.9375) (mid 319.0328427 126.917399) (end 319.31 126.8575) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_line (start 319.30999999999995 126.85749999999999) (end 374.80999999999995 110.66999999999999) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_arc (start 374.81 110.67) (mid 375.85 109.95) (end 376.25 108.75) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 236.23485339999996 105.1721569) (end 238.2 112.506183880565) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 238.9573389 115.3326111) (end 243.02885329999998 130.5277098) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_arc (start 243.02885329999995 130.5277098) (mid 243.96070499999996 131.7421225) (end 245.47834309999996 131.9419234) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 245.4783431 131.9419234) (end 261.41611919999997 127.67140909999999) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_arc (start 261.41611919999997 127.67140909999999) (mid 262.0773331 127.3552022) (end 262.58022989999995 126.822018) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 261.25 119.3240369773929) (end 260.1885093697462 115.36249999999995) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 238.2 102.5750450453244) (end 237.64906699999997 102.72266710000001) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_arc (start 237.64906699999997 102.72266710000001) (mid 236.43465429999998 103.6545188) (end 236.23485339999996 105.1721569) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 239.7335958 120.4378983) (end 246.5275957 145.7934512) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_arc (start 246.52759569999998 145.7934512) (mid 247.4594474 147.0078639) (end 248.9770855 147.2076648) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 248.97708550000002 147.20766480000003) (end 264.9148616 142.93715050000003) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_arc (start 264.9148616 142.93715050000003) (mid 266.1292743 142.00529880000002) (end 266.3290752 140.48766070000002) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 266.3290752 140.48766070000002) (end 264.35558 133.12247630000002) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 261.38348884193834 112.17804592075635) (end 259.40334299999995 112.70862439999999) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_arc (start 259.40334299999995 112.7086244) (mid 258.66603289999995 113.0832011) (end 258.14329819999995 113.7240462) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_arc (start 258.14329829999997 113.72404620000003) (mid 257.614856 113.64977970000002) (end 257.0855855 113.71789420000003) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_line (start 257.08558550000004 113.71789420000002) (end 241.14780940000003 117.98840850000002) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
+(gr_arc (start 241.1478094 117.9884085) (mid 239.9333967 118.9202602) (end 239.7335958 120.4378983) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 
 )
 
