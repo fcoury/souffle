@@ -32,6 +32,7 @@ presets:
     horizontal_diode_shift: -0.5 kcow - 0.85
     diode_rotation: 0 # Diode rotation
     switch_rotation: 0
+    plate_to_pcb_padding: 3
   choc_v1:
     # Key and keycap measures
     kx: cx # spacing between key centers (X-axis)
@@ -52,6 +53,7 @@ presets:
     horizontal_diode_shift: -0.5 kcow - 0.85
     diode_rotation: -180 # Diode rotation
     switch_rotation: 180 # Hotswap south, led north
+    plate_to_pcb_padding: 3
   choc_v2:
     # Key and keycap measures
     $extends: presets.choc_v1
@@ -70,7 +72,8 @@ units:
   hand_rotation: 0
 
   # Physical measures
-  screw_radius: 1.1 # M2 screws
+  # screw_radius: 1.1 # M2 screws
+  screw_radius: 1.6 # M2 screws
   screw_diameter: screw_radius * 2
   screw_head_radius: 2.05
   screw_head_diameter: screw_head_radius * 2
@@ -166,6 +169,46 @@ points:
       rows:
         home:
           row_net: R4 # New row net for thumb cluster
+
+    screw_pcb_top_left:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        ref: matrix_outer_number
+        shift: [0.5 ks, -0.5 kp - 5]
+
+    screw_pcb_top_right:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        ref: matrix_inner_number
+        shift: [-0.5 ks, -0.5 kp - 2]
+
+    screw_pcb_bottom_left:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        ref: matrix_pinky_bottom
+        shift: [0.5 ks + 5, -0.5 kp - 5]
+
+    screw_pcb_bottom_right:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [-0.5 ks + 2.5, -0.5 kp - 4]
+
+    screw_pcb_thumb:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        ref: thumb_thumbkey_home
+        shift: [0 ks, 0.5 kp]
 
   mirror:
     ref: matrix_inner_number
@@ -310,6 +353,24 @@ outlines:
       size: [14, 14]
       fillet: 0
 
+  all_keys:
+    - what: rectangle
+      where: true
+      size: [14, 14]
+      fillet: 0
+
+  left_keys:
+    - what: rectangle
+      where: /^matrix_|^thumb_/
+      size: [kcow, kcoh]
+      fillet: 0
+
+  right_keys:
+    - what: rectangle
+      where: /^mirror_/
+      size: [kcow, kcoh]
+      fillet: 0
+
   left_keys_1_5u:
     - what: rectangle
       where: thumb_thumbkey_home
@@ -361,18 +422,28 @@ outlines:
       operation: add
 
   left_plate_outline:
-    - name: left_plate_outline
-    - name: keys
+    - name: left_pcb_outline
+      expand: plate_to_pcb_padding
+      joints: 0
+    - name: left_keys
+      operation: subtract
+
+  right_plate_outline:
+    - name: right_pcb_outline
+      expand: plate_to_pcb_padding
+      joints: 0
+    - name: right_keys
       operation: subtract
 
   screws:
     - what: circle
       where: /screw_pcb/
       radius: screw_radius
-  screw_heads:
-    - what: circle
-      where: /screw_pcb/
-      radius: screw_head_radius
+
+  # screw_heads:
+  #   - what: circle
+  #     where: /screw_pcb/
+  #     radius: screw_head_radius
 
 pcbs:
   souffle_left:
@@ -382,18 +453,15 @@ pcbs:
         outline: left_pcb_outline
 
     footprints:
-      m2_screws:
-        what: ceoloide/mounting_hole_npth
-        where: /screw_mcu/
+      m2_spacers:
+        what: mounting_hole_npth
+        where: /^screw_pcb/
         params:
           hole_size: screw_diameter
           hole_drill: screw_diameter
-      m2_spacers:
-        what: ceoloide/mounting_hole_npth
-        where: /screw_pcb/
-        params:
-          hole_size: spacer_diameter
-          hole_drill: spacer_diameter
+        # params:
+        #   hole_size: spacer_diameter
+        #   hole_drill: spacer_diameter
 
       key_switches:
         what: *switch_footprint
@@ -492,14 +560,8 @@ pcbs:
         outline: right_pcb_outline
 
     footprints:
-      m2_screws:
-        what: ceoloide/mounting_hole_npth
-        where: /screw_mcu/
-        params:
-          hole_size: screw_diameter
-          hole_drill: screw_diameter
       m2_spacers:
-        what: ceoloide/mounting_hole_npth
+        what: mounting_hole_npth
         where: /screw_pcb/
         params:
           hole_size: spacer_diameter
