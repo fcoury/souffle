@@ -5,19 +5,19 @@ meta:
   ref: &kb_ref "Souffle"
   author: "Felipe Coury"
   url: &kb_url https://github.com/fcoury/souffle # Replace with your repo if you create one
-  # footprint: &switch_footprint "pg1316s"
-  footprint: &switch_footprint "switch_choc_v1_v2"
+  footprint: &switch_footprint "pg1316s"
+  # footprint: &switch_footprint "switch_choc_v1_v2"
   switch:
-    # $extends: presets.pg1316s
-    $extends: presets.choc_v1
+    $extends: presets.pg1316s
+    # $extends: presets.choc_v1
 
 presets:
   pg1316s:
     # Key and keycap measures
     kx: 13.5 # spacing between key centers (X-axis)
     ky: 13 # spacing between key centers (Y-axis)
-    ks: 17 # horizontal space between columns (default: 19)
-    kp: 17 # vertical padding between keys (deafult: 19)
+    ks: 18.5 # horizontal space between columns (default: 19)
+    kp: 18.5 # vertical padding between keys (deafult: 19)
     kpx: ks * 0.5 # x padding for the outline
     kpy: kp * 0.5 # y padding for the outline
     kcow: 13.8 # key cutout hole width (cherry, choc v2: 14, choc v1: 13.8)
@@ -71,13 +71,16 @@ units:
 
   hand_rotation: 0
 
+  outer_splay: 5
+  pinky_splay: 2.5
+
   # Physical measures
-  # screw_radius: 1.1 # M2 screws
-  screw_radius: 1.6 # M2 screws
+  screw_radius: 1.1 # M2 screws
+  # screw_radius: 1.6 # M3 screws
   screw_diameter: screw_radius * 2
   screw_head_radius: 2.05
   screw_head_diameter: screw_head_radius * 2
-  spacer_radius: 2.15 # M2 standoffs
+  spacer_radius: 1.725 # M2 standoffs
   spacer_diameter: spacer_radius * 2
   fillet_radius: 0.5
   pwr_trace_width: 0.25
@@ -93,6 +96,22 @@ units:
   top_plate_thickness: 1.6
   internal_distance_between_plates: 4
 
+  # xiao nrf52840 dimensions
+  # mcux: 17.78
+  # mcuy: 21
+
+  # nice!nano dimensions
+  # mcux: 18
+  # mcuy: 33.4
+
+  # nice!nano rotated dimensions
+  mcux: 33.4
+  mcuy: 18
+
+  # pcb rectangle dimensions
+  pcbx: 119
+  pcby: 104
+
 points:
   zones:
     matrix:
@@ -103,7 +122,8 @@ points:
           - key
       anchor:
         rotate: hand_rotation
-        shift: [100, -100] # Fix KiCad placement
+        shift: [100, -120] # Fix KiCad placement
+        # rotate: pinky_splay + ring_splay
       columns:
         outer:
           key:
@@ -143,56 +163,60 @@ points:
         spread: ks
         stagger: 0
       anchor:
-        ref: matrix_middle_bottom
-        shift: [0, -1.3 kp]
+        # cols: outer, pinky, ring, middle, index, inner
+        ref: matrix_index_bottom
+        shift: [-0.5 kp, -1.1 kp]
       columns:
         inward: # Closest thumb key to the main matrix
           key:
             column_net: C2
-        outward: # Outward thumb key
-          key:
-            column_net: C3
-        small_thumbkey: # Extra outward thumb key
+        middle: # Extra outward thumb key
           key:
             column_net: C4
-            shift: [3, -0.2 kp]
-            splay: -15
-        thumbkey: # The space/enter key 1.5u
+            shift: [0, -1]
+            splay: -7.5
+        outward: # The space/enter key 1.5u
           key:
             column_net: C5
-            shift: [4, -0.5 kp]
-            # stagger: 0.125 kp
-            # splay: -15
-            rotate: 90
-            tags:
-              - key_1_5u
+            shift: [0, -2]
+            splay: -7.5
       rows:
         home:
           row_net: R4 # New row net for thumb cluster
+
+    ref_mcu:
+      anchor:
+        ref: matrix_outer_number
+        shift: [6, 23.1]
+
+    ref_display:
+      anchor:
+        ref: matrix_index_number
+        shift: [13, 20.1]
 
     screw_pcb_top_left:
       key.tags:
         - helper
         - screw
       anchor:
-        ref: matrix_outer_number
-        shift: [0.5 ks, -0.5 kp - 5]
+        ref: ref_mcu
+        shift: [0.5 mcux + 5, 5]
 
     screw_pcb_top_right:
       key.tags:
         - helper
         - screw
       anchor:
-        ref: matrix_inner_number
-        shift: [-0.5 ks, -0.5 kp - 2]
+        ref: ref_display
+        shift: [15, -10]
 
     screw_pcb_bottom_left:
       key.tags:
         - helper
         - screw
       anchor:
-        ref: matrix_pinky_bottom
-        shift: [0.5 ks + 5, -0.5 kp - 5]
+        ref: matrix_outer_bottom
+        shift: [-0.5 kp, -0.5 kp - 2]
 
     screw_pcb_bottom_right:
       key.tags:
@@ -200,21 +224,19 @@ points:
         - screw
       anchor:
         ref: matrix_inner_bottom
-        shift: [-0.5 ks + 2.5, -0.5 kp - 4]
-
-    screw_pcb_thumb:
-      key.tags:
-        - helper
-        - screw
-      anchor:
-        ref: thumb_thumbkey_home
-        shift: [0 ks, 0.5 kp]
+        shift: [0.5 ks + 2, -0.5 kp]
 
   mirror:
     ref: matrix_inner_number
     distance: 80
 
 outlines:
+  left_pcb_outline_master:
+    - what: rectangle
+      where: ref_mcu
+      size: [pcbx, pcby]
+      adjust.shift: [0.5pcbx-0.5mcux-(2.75/4)-1.5, -0.5pcby+0.5mcuy+0.708]
+
   left_matrix_outline:
     - what: polygon
       operation: stack
@@ -248,24 +270,21 @@ outlines:
           shift: [kpx, -kpy]
 
         # --- Thumb Cluster Contour ---
-        # cols: inward, mid, outward, small_thumbkey, thumbkey
+        # cols: inward, mid, outward, middle, outward
         # rows: home
         #
-        # here we ignore the thumbkey to be added later
-        # - ref: thumb_thumbkey_home
-        #   shift: [-kpx, kpy]
-        # - ref: thumb_thumbkey_home
-        #   shift: [kpx, kpy]
-        # - ref: thumb_thumbkey_home
-        #   shift: [kpx, -kpy]
-        # - ref: thumb_thumbkey_home
-        #   shift: [-kpx, -kpy]
-        - ref: thumb_small_thumbkey_home
+        - ref: thumb_outward_home
+          shift: [-kpx, kpy]
+        - ref: thumb_outward_home
+          shift: [kpx, kpy]
+        - ref: thumb_outward_home
           shift: [kpx, -kpy]
-        - ref: thumb_small_thumbkey_home
+        - ref: thumb_outward_home
           shift: [-kpx, -kpy]
-        - ref: thumb_inward_home
+        - ref: thumb_middle_home
           shift: [kpx, -kpy]
+        - ref: thumb_middle_home
+          shift: [-kpx, -kpy]
         - ref: thumb_inward_home
           shift: [-kpx, -kpy]
 
@@ -306,24 +325,21 @@ outlines:
           shift: [kpx, -kpy]
 
         # --- Thumb Cluster Contour ---
-        # cols: inward, mid, outward, small_thumbkey, thumbkey
+        # cols: inward, mid, outward, middle, outward
         # rows: home
         #
-        # here we ignore the thumbkey to be added later
-        # - ref: thumb_thumbkey_home
-        #   shift: [-kpx, kpy]
-        # - ref: thumb_thumbkey_home
-        #   shift: [kpx, kpy]
-        # - ref: thumb_thumbkey_home
-        #   shift: [kpx, -kpy]
-        # - ref: thumb_thumbkey_home
-        #   shift: [-kpx, -kpy]
-        - ref: mirror_thumb_small_thumbkey_home
+        - ref: mirror_thumb_outward_home
+          shift: [-kpx, kpy]
+        - ref: mirror_thumb_outward_home
+          shift: [kpx, kpy]
+        - ref: mirror_thumb_outward_home
           shift: [kpx, -kpy]
-        - ref: mirror_thumb_small_thumbkey_home
+        - ref: mirror_thumb_outward_home
           shift: [-kpx, -kpy]
-        - ref: mirror_thumb_inward_home
+        - ref: mirror_thumb_middle_home
           shift: [kpx, -kpy]
+        - ref: mirror_thumb_middle_home
+          shift: [-kpx, -kpy]
         - ref: mirror_thumb_inward_home
           shift: [-kpx, -kpy]
 
@@ -333,19 +349,41 @@ outlines:
 
   left_mcu_cover_outline:
     - what: rectangle
-      where: matrix_inner_top
+      operation: add
+      where: matrix_inner_number
       adjust:
-        shift: [ks, -0.25 kp + 2.6]
-      size: [1.6 ks, 3 kp]
-      fillet: 0
+        shift: [1 ks + 1, 0.5 kp]
+      size: [1 ks + 2, 2]
+    - what: rectangle
+      where: matrix_inner_number
+      adjust:
+        shift: [1ks + 1, -0.5 kp]
+      size: [1 ks + 2, 2 kp]
+    - what: rectangle
+      operation: add
+      where: matrix_inner_home
+      adjust:
+        shift: [1ks + 1, -0.5 kp + 2]
+      size: [1 ks + 2, 2 kp + 16]
 
   right_mcu_cover_outline:
     - what: rectangle
-      where: mirror_matrix_inner_top
+      where: mirror_matrix_inner_number
       adjust:
-        shift: [ks, -0.25 kp + 2.6]
-      size: [1.6 ks, 3 kp]
-      fillet: 0
+        shift: [1ks + 1, -0.5 kp]
+      size: [1 ks + 2, 2 kp]
+    - what: rectangle
+      operation: add
+      where: mirror_matrix_inner_home
+      adjust:
+        shift: [1ks + 1, -0.5 kp + 2]
+      size: [1 ks + 2, 2 kp]
+    - what: rectangle
+      operation: add
+      where: mirror_matrix_inner_number
+      adjust:
+        shift: [1 ks + 1, 0.5 kp]
+      size: [1 ks + 2, 2]
 
   keys:
     - what: rectangle
@@ -373,29 +411,28 @@ outlines:
 
   left_keys_1_5u:
     - what: rectangle
-      where: thumb_thumbkey_home
+      where: thumb_outward_home
       size: [1.5 keycw, keych]
       fillet: 0
     - what: rectangle
-      where: thumb_small_thumbkey_home
+      where: thumb_middle_home
       size: [keycw, keych]
       fillet: 0
 
   right_keys_1_5u:
     - what: rectangle
-      where: mirror_thumb_thumbkey_home
+      where: mirror_thumb_outward_home
       size: [1.5 keycw, keych]
       fillet: 0
     - what: rectangle
-      where: mirror_thumb_small_thumbkey_home
+      where: mirror_thumb_middle_home
       size: [keycw, keych]
       fillet: 0
 
   left_thumb_outline:
-    - what: outline
-      name: left_keys_1_5u
-      expand: 2
-      joints: 0
+    - what: rectangle
+      where: /^thumb/
+      size: [ks + kpx, kp + kpy]
 
   right_thumb_outline:
     - what: outline
@@ -404,13 +441,24 @@ outlines:
       joints: 0
 
   left_pcb_outline:
-    - what: outline
-      name: left_matrix_outline
-      expand: 1
-      joints: 0
+    - what: rectangle
+      where: ref_mcu
+      size: [pcbx, pcby]
+      adjust.shift: [0.5pcbx-0.5mcux-(2.75/4)-1.5, -0.5pcby+0.5mcuy+0.708]
+      fillet: 2
     - what: outline
       name: left_thumb_outline
-      operation: add
+      fillet: 2
+    # - what: outline
+    #   name: left_matrix_outline
+    #   expand: 1
+    #   joints: 0
+    # - what: outline
+    #   name: left_mcu_cover_outline
+    #   operation: add
+    # # - what: outline
+    # #   name: left_thumb_outline
+    # #   operation: add
 
   right_pcb_outline:
     - what: outline
@@ -418,8 +466,11 @@ outlines:
       expand: 1
       joints: 0
     - what: outline
-      name: right_thumb_outline
+      name: right_mcu_cover_outline
       operation: add
+    # - what: outline
+    #   name: right_thumb_outline
+    #   operation: add
 
   left_plate_outline:
     - name: left_pcb_outline
@@ -457,11 +508,8 @@ pcbs:
         what: mounting_hole_npth
         where: /^screw_pcb/
         params:
-          hole_size: screw_diameter
-          hole_drill: screw_diameter
-        # params:
-        #   hole_size: spacer_diameter
-        #   hole_drill: spacer_diameter
+          hole_size: spacer_diameter
+          hole_drill: spacer_diameter
 
       key_switches:
         what: *switch_footprint
@@ -469,9 +517,9 @@ pcbs:
         params:
           from: "{{column_net}}"
           to: "{{colrow}}"
-          include_keycap: true
-          include_corner_marks: true
-          include_stabilizer_pad: false
+          # include_keycap: true
+          # include_corner_marks: true
+          # include_stabilizer_pad: false
         adjust:
           rotate: switch_rotation
 
@@ -523,29 +571,47 @@ pcbs:
           from: pos
           to: RAW
 
+      display:
+        what: nice_view
+        where:
+          ref: ref_display
+          rotate: -90
+
       mcu:
+        # what: xiao-ble
         what: mcu_nice_nano
-        where: matrix_outer_number
-        adjust:
+        where:
+          ref: ref_mcu
+          shift: [-2, 0]
           rotate: 90
-          shift: [5.3, -3]
         params:
-          P0: DAT
-          P1: LED
-          P2: SDA
-          P3: SCL
-          P4: CS
+          # D0: R0
+          # D1: R1
+          # D2: R2
+          # D3: R3
+          # D4: R4
+          # D5: C0
+          # D6: C1
+          # D7: C2
+          # D8: C3
+          # D9: C4
+          # D10: C5
+          # side: F
+          P0: MOSI
+          P1: SCK
+          P2: CS
           P5: R0
           P6: R1
           P7: R2
           P8: R3
+          P9: R4
           P21: C0
           P20: C1
           P19: C2
           P18: C3
           P15: C4
           P14: C5
-          side: B
+          side: F
           reversible: false
           include_traces: true
           show_silk_labels: true
@@ -562,10 +628,13 @@ pcbs:
     footprints:
       m2_spacers:
         what: mounting_hole_npth
-        where: /screw_pcb/
+        where: /^mirror_screw_pcb/
         params:
           hole_size: spacer_diameter
           hole_drill: spacer_diameter
+        # params:
+        #   hole_size: spacer_diameter
+        #   hole_drill: spacer_diameter
 
       key_switches:
         what: *switch_footprint
@@ -573,9 +642,9 @@ pcbs:
         params:
           from: "{{column_net}}"
           to: "{{colrow}}"
-          include_keycap: true
-          include_corner_marks: true
-          include_stabilizer_pad: false
+          # include_keycap: true
+          # include_corner_marks: true
+          # include_stabilizer_pad: false
           # P1: "{{column_net}}"
           # P2: "{{colrow}}"
           # P3: ""
@@ -630,10 +699,9 @@ pcbs:
 
       mcu:
         what: mcu_nice_nano
-        where: mirror_matrix_outer_number
+        where: mirror_matrix_inner_number
         adjust:
-          rotate: 90
-          shift: [5.3, -3]
+          shift: [1 ks + 1, -0.5 kp + 2]
         params:
           P0: DAT
           P1: LED
